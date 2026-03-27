@@ -14,9 +14,16 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-      <li><a href="about.html" class="active">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="contact.html">Contact</a></li>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="training.html">Training &amp; Assessment</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -40,6 +47,7 @@
         <p>Before launching this firm, Griffin McGuire owned and operated Residential Metals, a custom metal fabrication business, for nearly three years — managing production, quality assurance, materials procurement, logistics, vendor and client relationships from the ground up. Before that, he worked as a fabricator and passivation specialist performing GMAW, FCAW, and GTAW on stainless steel for pharmaceutical and food production clients in highly regulated environments, and as a production welder fabricating aluminum and steel assemblies.</p>
         <p>That combination — regulated industry fabrication, business ownership, and now consulting — produces a different kind of advisor. One who can read a welding code and also explain why experienced welders ignore the parts written by people who have never held a stinger. One who can develop an SOP that people will actually follow, because it's written the way the work actually happens.</p>
         <p>Setpoint Advisors is based in Western New York and serves clients locally and remotely across the United States.</p>
+        <p>In parallel with operations consulting, Setpoint Advisors provides assessment development and SME services for eLearning platforms, publishers, certification bodies, and academic programs. This work draws on the same technical foundation — reviewing and rebalancing complete exams, drafting original questions and explanations, and aligning curriculum to AWS SENSE, NCCER, and industry standards. Active engagement with trade programs across Western New York from Buffalo to Rochester informs every assessment produced.</p>
       </div>
 
       <div>
@@ -65,6 +73,15 @@
           <li>AWS CWI Examination Seminar — AWS D1.1 &amp; API 1104</li>
           <li>Erie 1 BOCES — Welding Technology Program</li>
           <li>St. Joseph's Collegiate Institute, Buffalo NY — NYS Regents Diploma</li>
+        </ul>
+
+        <h3 style="margin-top:24px;color:var(--navy);margin-bottom:4px;">Assessment &amp; Curriculum Work</h3>
+        <ul class="credential-list">
+          <li>Full exam review and difficulty rebalancing — eLearning platforms</li>
+          <li>Original item writing: questions, rationales, distractors, and illustrations</li>
+          <li>Curriculum alignment to AWS SENSE, NCCER, and OSHA standards</li>
+          <li>Hands-on engagement with trade students across Western New York</li>
+          <li>Domains: Welding, CNC, Robotics, Electronics, Metallurgy, Construction, Project Management</li>
         </ul>
 
         <h3 style="margin-top:24px;color:var(--navy);margin-bottom:4px;">Community &amp; Professional</h3>
@@ -112,11 +129,32 @@
   <div class="footer-inner">
     <span class="footer-copy">&copy; 2026 Setpoint Advisors &mdash; griffin@setpointadvisors.com</span>
     <div class="footer-links">
-      <a href="services.html">Services</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a>
+      <a href="services.html">Services</a>
+      <a href="training.html">Training &amp; Assessment</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
       <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank">LinkedIn</a>
     </div>
   </div>
 </footer>
 </div>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 </body>
 </html>

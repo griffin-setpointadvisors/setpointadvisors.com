@@ -14,9 +14,16 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li><li><a href="portfolio.html" class="active">Portfolio</a></li><li><a href="contact.html">Contact</a></li>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="training.html">Training &amp; Assessment</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -31,8 +38,14 @@
 
 <section>
   <div class="container">
-    <div class="portfolio-grid">
 
+    <!-- Operations & Compliance -->
+    <div class="portfolio-section-heading">
+      <h2>Operations &amp; Compliance</h2>
+      <span class="section-pill">For Manufacturers &amp; Job Shops</span>
+    </div>
+
+    <div class="portfolio-grid">
       <div class="portfolio-card">
         <div class="doc-type">Standard Operating Procedure</div>
         <h3>Passivation of Stainless Steel Fabrications</h3>
@@ -53,12 +66,26 @@
         <p>Compliance and effectiveness review of a scaffold safety training script against 29 CFR 1926 Subpart L. Seven findings rated by severity across four dimensions: regulatory accuracy, field-level realism, instructional clarity, and learner engagement. Issued with a Conditional Pass rating and specific revision guidance.</p>
         <div class="doc-meta">STE-012 &bull; Construction / Safety Training &bull; 7 Findings / OSHA Subpart L</div>
       </div>
-
     </div>
 
-    <div style="margin-top:44px;padding:28px;background:var(--steel-pale);border-left:3px solid var(--steel);">
+    <!-- Training & Assessment -->
+    <div class="portfolio-section-heading">
+      <h2>Training &amp; Assessment Development</h2>
+      <span class="section-pill">For Publishers, Platforms &amp; Programs</span>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="doc-type">Industrial Safety Exam Sample</div>
+        <h3>15-Question Industrial Safety Assessment — Sample</h3>
+        <p>A sample assessment covering core industrial safety topics including hazard identification, PPE selection, lockout/tagout procedures, and OSHA standards application. Demonstrates question construction, difficulty calibration, distractor rationale, and answer explanation format across multiple question types. Aligned to OSHA 29 CFR General Industry standards.</p>
+        <div class="doc-meta">EXAM-SAMPLE-001 &bull; Industrial Safety &bull; OSHA 29 CFR &bull; 15 Items / Mixed Format</div>
+      </div>
+    </div>
+
+    <div style="margin-top:36px;padding:28px;background:var(--steel-pale);border-left:3px solid var(--steel);">
       <h3 style="margin-bottom:8px;">Request Sample Documents</h3>
-      <p style="margin:0;font-size:13px;color:var(--muted);">Full PDF versions of the documents above are available on request. Reach out directly and we'll get them to you promptly.</p>
+      <p style="margin:0;font-size:13px;color:var(--muted);">Full PDF versions of all documents above are available on request. Reach out directly and we&rsquo;ll get them to you promptly.</p>
       <a href="contact.html" class="btn btn-primary" style="margin-top:18px;display:inline-block;">Request Samples</a>
     </div>
   </div>
@@ -76,11 +103,32 @@
   <div class="footer-inner">
     <span class="footer-copy">&copy; 2026 Setpoint Advisors &mdash; griffin@setpointadvisors.com</span>
     <div class="footer-links">
-      <a href="services.html">Services</a><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a>
+      <a href="services.html">Services</a>
+      <a href="training.html">Training &amp; Assessment</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
       <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank">LinkedIn</a>
     </div>
   </div>
 </footer>
 </div>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
 </body>
 </html>
