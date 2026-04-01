@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Setpoint Advisors sample work: SOP for stainless steel passivation, operations gap analysis, and scaffold safety training evaluation against OSHA 29 CFR 1926 Subpart L.">
-  <meta name="keywords" content="SOP sample, gap analysis sample, welding consulting portfolio, manufacturing consulting examples, OSHA compliance review, passivation SOP">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Setpoint Advisors sample work: SOP development, gap analysis, welding procedure review, training assessments, curriculum alignment, and test bank development.">
+  <meta name="keywords" content="SOP sample, gap analysis sample, welding consulting portfolio, manufacturing consulting examples, assessment development, item writing, curriculum alignment">
   <meta name="author" content="Griffin McGuire, Setpoint Advisors">
   <title>Portfolio | Setpoint Advisors</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <div class="page-wrap">
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
+    <a class="nav-logo" href="/index.html"><img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="training.html">Training &amp; Assessment</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html" class="active">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/consulting/">Consulting</a></li>
+      <li><a href="/training/">Training &amp; Assessment</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="/contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -39,54 +40,86 @@
 <section>
   <div class="container">
 
-    <!-- Operations & Compliance -->
-    <div class="portfolio-section-heading">
-      <h2>Operations &amp; Compliance</h2>
-      <span class="section-pill">For Manufacturers &amp; Job Shops</span>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="consulting">Consulting</button>
+      <button class="filter-btn" data-filter="training">Training</button>
     </div>
 
     <div class="portfolio-grid">
-      <div class="portfolio-card">
+
+      <!-- CONSULTING -->
+      <div class="portfolio-card" data-category="consulting">
+        <span class="category-badge consulting">Consulting</span>
         <div class="doc-type">Standard Operating Procedure</div>
         <h3>Passivation of Stainless Steel Fabrications</h3>
         <p>Full-length SOP for passivation of austenitic stainless steel for pharmaceutical and food production end-use. Covers pre-treatment verification, citric and nitric acid treatment methods, copper sulfate and ferroxyl verification testing, acceptance criteria, nonconformance handling, and documentation requirements. References ASTM A967 and ASTM A380.</p>
         <div class="doc-meta">SOP-FAB-006 &bull; Pharma / Food Grade &bull; ASTM A967 / A380</div>
       </div>
 
-      <div class="portfolio-card">
+      <div class="portfolio-card" data-category="consulting">
+        <span class="category-badge consulting">Consulting</span>
         <div class="doc-type">Operations Gap Analysis Report</div>
         <h3>Job Shop Operations Review — Precision Components LLC</h3>
         <p>Five-finding gap analysis for a fictitious 18-person custom fabrication job shop. Identifies operational weaknesses across documentation, scheduling, inspection records, purchasing, and training — each rated by priority with specific corrective recommendations and a phased 90-day implementation roadmap.</p>
         <div class="doc-meta">GAP-2026-001 &bull; Custom Fabrication &bull; 5 Findings / 3 HIGH Priority</div>
       </div>
 
-      <div class="portfolio-card">
+      <div class="portfolio-card" data-category="consulting">
+        <span class="category-badge consulting">Consulting</span>
         <div class="doc-type">Safety Training Program Evaluation</div>
         <h3>Scaffold Safety Training — OSHA 29 CFR 1926 Subpart L</h3>
         <p>Compliance and effectiveness review of a scaffold safety training script against 29 CFR 1926 Subpart L. Seven findings rated by severity across four dimensions: regulatory accuracy, field-level realism, instructional clarity, and learner engagement. Issued with a Conditional Pass rating and specific revision guidance.</p>
         <div class="doc-meta">STE-012 &bull; Construction / Safety Training &bull; 7 Findings / OSHA Subpart L</div>
       </div>
-    </div>
 
-    <!-- Training & Assessment -->
-    <div class="portfolio-section-heading">
-      <h2>Training &amp; Assessment Development</h2>
-      <span class="section-pill">For Publishers, Platforms &amp; Programs</span>
-    </div>
+      <div class="portfolio-card" data-category="consulting">
+        <span class="category-badge consulting">Consulting</span>
+        <div class="doc-type">Welding Procedure Documentation Review</div>
+        <h3>AWS D1.1 Compliance Review — Structural Steel Fabricator</h3>
+        <p>AWS D1.1 compliance review for a 12-person structural steel fabricator. Identified 4 qualification gaps and developed a corrective documentation package including revised WPS, PQR review checklist, and welder qualification tracking matrix.</p>
+        <div class="doc-meta">WPR-2026-003 &bull; Structural Fabrication &bull; AWS D1.1 &bull; 4 Gaps Identified</div>
+      </div>
 
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
+      <!-- TRAINING -->
+      <div class="portfolio-card" data-category="training">
+        <span class="category-badge training">Training</span>
         <div class="doc-type">Industrial Safety Exam Sample</div>
         <h3>15-Question Industrial Safety Assessment — Sample</h3>
         <p>A sample assessment covering core industrial safety topics including hazard identification, PPE selection, lockout/tagout procedures, and OSHA standards application. Demonstrates question construction, difficulty calibration, distractor rationale, and answer explanation format across multiple question types. Aligned to OSHA 29 CFR General Industry standards.</p>
         <div class="doc-meta">EXAM-SAMPLE-001 &bull; Industrial Safety &bull; OSHA 29 CFR &bull; 15 Items / Mixed Format</div>
       </div>
+
+      <div class="portfolio-card" data-category="training">
+        <span class="category-badge training">Training</span>
+        <div class="doc-type">Curriculum Alignment Report</div>
+        <h3>AWS SENSE Curriculum Alignment Report</h3>
+        <p>Full curriculum alignment to AWS SENSE standards for a regional CTE welding program. Identified 6 coverage gaps across Entry Level and Level 1 competencies and recommended sequence revisions to improve standards compliance and learner outcomes.</p>
+        <div class="doc-meta">ALIGN-2026-001 &bull; Welding &amp; Fabrication &bull; AWS SENSE &bull; 6 Gaps Identified</div>
+      </div>
+
+      <div class="portfolio-card" data-category="training">
+        <span class="category-badge training">Training</span>
+        <div class="doc-type">eLearning Content Review</div>
+        <h3>Welding Symbols eLearning Module Review</h3>
+        <p>Technical content review of a 4-module eLearning series on welding symbols for an eLearning platform. Flagged 12 technical inaccuracies, suggested clearer diagram briefs, and provided corrected reference language aligned to AWS A2.4.</p>
+        <div class="doc-meta">CR-2026-007 &bull; Welding &bull; eLearning Platform &bull; 12 Technical Flags</div>
+      </div>
+
+      <div class="portfolio-card" data-category="training">
+        <span class="category-badge training">Training</span>
+        <div class="doc-type">Test Bank Development</div>
+        <h3>Test Bank: Industrial Maintenance — 45 Questions</h3>
+        <p>45-question test bank for an industrial maintenance program, covering mechanical systems, electrical safety, and preventive maintenance. Multi-format items (MC, matching, short-answer) with full answer rationale. Produced for a publisher's instructor resources package.</p>
+        <div class="doc-meta">TB-2026-002 &bull; Mechanical Systems &bull; Publisher &bull; 45 Items / Multi-Format</div>
+      </div>
+
     </div>
 
     <div style="margin-top:36px;padding:28px;background:var(--steel-pale);border-left:3px solid var(--steel);">
       <h3 style="margin-bottom:8px;">Request Sample Documents</h3>
       <p style="margin:0;font-size:13px;color:var(--muted);">Full PDF versions of all documents above are available on request. Reach out directly and we&rsquo;ll get them to you promptly.</p>
-      <a href="contact.html" class="btn btn-primary" style="margin-top:18px;display:inline-block;">Request Samples</a>
+      <a href="/contact.html" class="btn btn-primary" style="margin-top:18px;display:inline-block;">Request Samples</a>
     </div>
   </div>
 </section>
@@ -95,20 +128,24 @@
   <div class="container">
     <h2>Ready to put this to work for your operation?</h2>
     <p>Every engagement starts with a conversation. Tell us what you're dealing with and we'll tell you straight whether we can help.</p>
-    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-inner">
-    <span class="footer-copy">&copy; 2026 Setpoint Advisors &mdash; griffin@setpointadvisors.com</span>
+    <div class="footer-brand">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:36px;width:auto;opacity:0.7;margin-bottom:8px;">
+      <span class="footer-copy">&copy; 2026 Setpoint Advisors</span>
+      <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
+    </div>
     <div class="footer-links">
-      <a href="services.html">Services</a>
-      <a href="training.html">Training &amp; Assessment</a>
-      <a href="about.html">About</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank">LinkedIn</a>
+      <a href="/consulting/">Consulting</a>
+      <a href="/training/">Training &amp; Assessment</a>
+      <a href="/about.html">About</a>
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </footer>
@@ -127,6 +164,23 @@
       links.classList.remove('open');
       toggle.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
+    });
+  });
+
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const portfolioCards = document.querySelectorAll('.portfolio-card[data-category]');
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      this.classList.add('active');
+      const filter = this.dataset.filter;
+      portfolioCards.forEach(function(card) {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
 </script>
