@@ -3,25 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Griffin McGuire — founder of Setpoint Advisors. CAWI-certified. Background in stainless steel fabrication, manufacturing operations, passivation for pharmaceutical clients, and assessment development for training organizations.">
-  <meta name="keywords" content="Griffin McGuire, CAWI, manufacturing consultant, fabrication, Setpoint Advisors, Buffalo NY, AWS Niagara Frontier, assessment development">
+  <meta name="description" content="Griffin McGuire — founder of Setpoint Advisors. CAWI-certified. Background in stainless steel fabrication, manufacturing operations, assessment development, and skilled trades talent validation.">
+  <meta name="keywords" content="Griffin McGuire, CAWI, manufacturing consultant, fabrication, Setpoint Advisors, Buffalo NY, AWS Niagara Frontier, assessment development, skilled trades talent">
   <meta name="author" content="Griffin McGuire, Setpoint Advisors">
   <title>About | Setpoint Advisors</title>
   <link rel="stylesheet" href="/style.css">
+  <style>
+    .page-header {
+      background: var(--navy); padding: 64px 0 56px; position: relative; overflow: hidden;
+    }
+    .page-header::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--steel) 0%, var(--steel-light) 50%, var(--steel) 100%);
+    }
+    .page-header h1 { color: var(--white); margin-bottom: 16px; }
+    .page-header p { color: #8fa8be; max-width: 560px; margin-bottom: 0; }
+
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+    }
+    .credential-list {
+      list-style: none; padding: 0; margin: 0 0 8px;
+    }
+    .credential-list li {
+      font-size: 13px; color: var(--muted); padding: 6px 0 6px 18px;
+      border-bottom: 1px solid var(--border); position: relative;
+    }
+    .credential-list li:last-child { border-bottom: none; }
+    .credential-list li::before {
+      content: '—'; position: absolute; left: 0; color: var(--steel); font-size: 11px;
+    }
+
+    .service-lanes {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0; margin-top: 44px; border: 1px solid var(--border);
+    }
+    .service-lane {
+      padding: 28px 24px;
+      border-right: 1px solid var(--border);
+    }
+    .service-lane:last-child { border-right: none; }
+    .lane-num {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--steel); margin-bottom: 10px; display: block;
+    }
+    .service-lane h3 { font-size: 14px; margin-bottom: 10px; }
+    .service-lane p { font-size: 12px; color: var(--muted); margin: 0; line-height: 1.6; }
+
+    @media (max-width: 760px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .service-lanes { grid-template-columns: 1fr; }
+      .service-lane { border-right: none; border-bottom: 1px solid var(--border); }
+      .service-lane:last-child { border-bottom: none; }
+    }
+  </style>
 </head>
 <body>
 <div class="page-wrap">
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="/index.html"><img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
+    <a class="nav-logo" href="/index.html">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;">
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="/index.html">Home</a></li>
-      <li><a href="/consulting/">Consulting</a></li>
       <li><a href="/training/">Training &amp; Assessment</a></li>
+      <li><a href="/talent.html">Talent Profiles</a></li>
       <li><a href="/about.html" class="active">About</a></li>
       <li><a href="/portfolio.html">Portfolio</a></li>
       <li><a href="/contact.html">Contact</a></li>
@@ -29,30 +80,41 @@
   </div>
 </nav>
 
+<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="container">
     <div class="section-label" style="color:var(--steel-light);">The Person Behind the Work</div>
-    <h1>Real Manufacturing Experience Informs Everything We Do</h1>
-    <p>I've run operations and helped people learn how to do operations. That dual experience is why our consulting recommendations are practical and our training materials are real-world grounded.</p>
+    <h1>Real Manufacturing Experience<br>Informs Everything We Do</h1>
+    <p>I've run operations, helped people learn how to do operations, and now I validate the people doing the operations. That layered experience is why the work is different — and why it gets used.</p>
   </div>
 </section>
 
+<!-- BIO + CREDENTIALS -->
 <section>
   <div class="container">
     <div class="about-grid">
+
       <div>
         <div class="section-label">Founder</div>
         <h2 style="margin-bottom:8px;">Griffin McGuire</h2>
         <div class="rule-accent"></div>
+
         <p>Setpoint Advisors exists because the gap between consulting theory and operational reality is large — and expensive. Most small manufacturers don't need a firm with a polished methodology deck. They need someone who has stood on a production floor, managed a shop end-to-end, and understands what the regulations actually require at the point of execution.</p>
-        <p>Before launching this firm, Griffin McGuire owned and operated Residential Metals, a custom metal fabrication business, for nearly three years — managing production, quality assurance, materials procurement, logistics, vendor and client relationships from the ground up. Before that, he worked as a fabricator and passivation specialist performing GMAW, FCAW, and GTAW on stainless steel for pharmaceutical and food production clients in highly regulated environments, and as a production welder fabricating aluminum and steel assemblies.</p>
-        <p>That combination — regulated industry fabrication, business ownership, and now consulting — produces a different kind of advisor. One who can read a welding code and also explain why experienced welders ignore the parts written by people who have never held a stinger. One who can develop an SOP that people will actually follow, because it's written the way the work actually happens.</p>
-        <p>In parallel with operations consulting, Setpoint Advisors provides assessment development and SME services for eLearning platforms, publishers, certification bodies, and academic programs. The same floor experience that informs every consulting engagement also informs every assessment question — because the best assessments are written by people who have done the work. Active engagement with trade programs across Western New York from Buffalo to Rochester keeps the content connected to how training actually happens.</p>
+
+        <p>Before launching this firm, Griffin McGuire owned and operated Residential Metals, a custom metal fabrication business, for nearly three years — managing production, quality assurance, materials procurement, logistics, and vendor and client relationships from the ground up. Before that, he worked as a fabricator and passivation specialist performing GMAW, FCAW, and GTAW on stainless steel for pharmaceutical and food production clients in highly regulated environments, and as a production welder fabricating aluminum and steel assemblies.</p>
+
+        <p>That combination — regulated industry fabrication, business ownership, and consulting — produces a different kind of advisor. One who can read a welding code and also explain why experienced welders ignore the parts written by people who have never held a stinger. One who can develop an SOP that people will actually follow, because it's written the way the work actually happens.</p>
+
+        <p>In parallel, Setpoint Advisors provides assessment development and SME services for eLearning platforms, publishers, certification bodies, and academic programs. The same floor experience that informs every consulting engagement informs every assessment question — because the best assessments are written by people who have done the work.</p>
+
+        <p>That same credibility now anchors our Validated Talent Profile service for manufacturers. As Membership Chair for AWS District 6's Niagara Frontier Section, Griffin works directly with young welding professionals, students, and apprenticeship programs across the region — building the candidate pipeline that makes every profile worth paying for. When a Setpoint assessment says a candidate is shop-floor ready, it's because the person doing the evaluating has done the same work.</p>
+
         <p>Setpoint Advisors is based in Western New York and serves clients locally and remotely across the United States.</p>
       </div>
 
       <div>
         <div class="section-label">Credentials &amp; Background</div>
+
         <h3 style="color:var(--navy);margin-bottom:4px;">Certifications</h3>
         <ul class="credential-list">
           <li>CAWI — Certified Associate Welding Inspector (AWS)</li>
@@ -85,6 +147,14 @@
           <li>Domains: Welding, CNC, Robotics, Electronics, Metallurgy, Construction, Project Management</li>
         </ul>
 
+        <h3 style="margin-top:24px;color:var(--navy);margin-bottom:4px;">Talent Validation Work</h3>
+        <ul class="credential-list">
+          <li>Technical assessment design for skilled trades hiring</li>
+          <li>Candidate evaluation calibrated against real production floor standards</li>
+          <li>Sourcing partnerships with technical schools, CTE programs, and apprenticeship networks</li>
+          <li>Talent pool development across upstate NY manufacturing corridor</li>
+        </ul>
+
         <h3 style="margin-top:24px;color:var(--navy);margin-bottom:4px;">Community &amp; Professional</h3>
         <ul class="credential-list">
           <li>Chairman, Membership Committee — AWS Niagara Frontier Section, District 6</li>
@@ -92,11 +162,44 @@
           <li>Weld-Off Judge — AWS Niagara Frontier Section (2nd consecutive year, 2026)</li>
         </ul>
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- WHAT WE DO — THREE LANES -->
 <section class="alt">
+  <div class="container">
+    <div class="section-label">What Setpoint Advisors Does</div>
+    <h2 style="margin-bottom:8px;">Three Services. One Foundation.</h2>
+    <div class="rule-accent"></div>
+    <p style="max-width:600px;">Every service Setpoint Advisors offers is grounded in the same credential — real time on the floor, doing the work. That's what makes the training content accurate, the assessments meaningful, and the talent profiles worth paying for.</p>
+
+    <div class="service-lanes">
+      <div class="service-lane">
+        <span class="lane-num">Service 01</span>
+        <h3>Training &amp; Assessment Development</h3>
+        <p>Technical curriculum and assessment content for eLearning platforms, publishers, certification bodies, and CTE programs. Item writing, exam review, curriculum alignment, and SME services — built by a practitioner, not a theorist.</p>
+        <a href="/training/" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);text-decoration:none;border-bottom:1px solid var(--steel);display:inline-block;margin-top:16px;">Explore →</a>
+      </div>
+      <div class="service-lane" style="background:var(--navy);">
+        <span class="lane-num" style="color:var(--steel-light);">Service 02</span>
+        <h3 style="color:var(--white);">Validated Talent Profiles</h3>
+        <p style="color:#8fa8be;">Shop-floor-ready candidate assessments for manufacturers hiring welders, machinists, CNC operators, and fabricators. You make all hiring decisions — we remove the risk of hiring unproven talent.</p>
+        <a href="/talent.html" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel-light);text-decoration:none;border-bottom:1px solid rgba(74,127,165,0.5);display:inline-block;margin-top:16px;">See Packages →</a>
+      </div>
+      <div class="service-lane">
+        <span class="lane-num">Service 03</span>
+        <h3>Operations Consulting</h3>
+        <p>Targeted consulting for manufacturers facing compliance gaps, audit preparation, SOP documentation, or operational improvements. Available selectively for the right projects — particularly in pharma/food-grade fabrication and welding compliance.</p>
+        <a href="/consulting/" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel);text-decoration:none;border-bottom:1px solid var(--steel);display:inline-block;margin-top:16px;">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
   <div class="container">
     <div class="section-label">How We Work</div>
     <h2 style="margin-bottom:8px;">The Setpoint Approach</h2>
@@ -105,26 +208,27 @@
       <div class="pillar">
         <div class="pillar-icon">🔧</div>
         <h3>Field-Level, Not Theoretical</h3>
-        <p>Every recommendation is grounded in how work actually gets done — not how it looks in a textbook. Clients who have been burned by consultants who don't understand their environment notice the difference immediately. The same applies to training content: assessments written by practitioners test what actually matters on the job.</p>
+        <p>Every recommendation, assessment, and candidate evaluation is grounded in how work actually gets done. Clients who have been burned by consultants who don't understand their environment notice the difference immediately.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">✓</div>
         <h3>Deliverables That Get Used</h3>
-        <p>An SOP nobody reads is worthless. A training assessment that doesn't reflect real work is useless. Documents and content are written for the people who use them — appropriate language, correct sequence, specific enough to be actionable. The goal is adoption, not documentation for its own sake.</p>
+        <p>An SOP nobody reads is worthless. A training assessment that doesn't reflect real work is useless. A candidate profile that's vague is a waste of money. Everything we deliver is written to be acted on.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">⚡</div>
         <h3>AI-Augmented, Expert-Verified</h3>
-        <p>Setpoint Advisors uses AI tools to deliver faster, more thorough research and documentation than traditional consulting workflows allow — while applying real operational judgment to every output. The same tools accelerate assessment development without sacrificing technical accuracy. Speed without sacrificing quality.</p>
+        <p>Setpoint Advisors uses AI tools to deliver faster, more thorough research and documentation — while applying real operational judgment to every output. Speed without sacrificing accuracy or quality.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CALLOUT -->
 <section class="callout-strip">
   <div class="container">
     <h2>Work with someone who has been there.</h2>
-    <p>Operations consulting for manufacturers. Assessment development for training organizations. Both built on real industrial experience.</p>
+    <p>Training content for publishers and programs. Validated talent profiles for manufacturers. Consulting for the right engagement. All built on real industrial experience.</p>
     <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
   </div>
 </section>
@@ -137,8 +241,9 @@
       <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
     </div>
     <div class="footer-links">
-      <a href="/consulting/">Consulting</a>
       <a href="/training/">Training &amp; Assessment</a>
+      <a href="/talent.html">Talent Profiles</a>
+      <a href="/consulting/">Consulting</a>
       <a href="/about.html">About</a>
       <a href="/portfolio.html">Portfolio</a>
       <a href="/contact.html">Contact</a>

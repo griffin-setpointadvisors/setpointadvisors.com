@@ -2,144 +2,245 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=/consulting/">
-  <meta name="description" content="Setpoint Advisors services: SOP development, gap analysis, compliance research, welding procedure documentation, and supply chain systems for manufacturers and job shops.">
-  <meta name="keywords" content="SOP development, operational gap analysis, welding procedure documentation, manufacturing compliance, OSHA compliance, quality systems, process improvement">
+  <meta name="description" content="Setpoint Advisors operations consulting — SOP development, gap analysis, compliance research, welding procedure documentation for manufacturers and job shops.">
+  <meta name="keywords" content="SOP development, operational gap analysis, welding procedure documentation, manufacturing compliance, OSHA compliance, CAWI, Buffalo NY">
   <meta name="author" content="Griffin McGuire, Setpoint Advisors">
-  <title>Services | Setpoint Advisors</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Operations Consulting | Setpoint Advisors</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .page-header {
+      background: var(--navy); padding: 64px 0 56px; position: relative; overflow: hidden;
+    }
+    .page-header::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--steel) 0%, var(--steel-light) 50%, var(--steel) 100%);
+    }
+    .page-header h1 { color: var(--white); margin-bottom: 16px; }
+    .page-header p { color: #8fa8be; max-width: 560px; margin-bottom: 0; }
+
+    .service-number {
+      font-size: 2.2rem; font-weight: 700; color: var(--border);
+      line-height: 1; min-width: 48px; padding-top: 4px;
+    }
+    .service-full {
+      padding: 48px 0; border-bottom: 1px solid var(--border);
+    }
+    .service-full:last-child { border-bottom: none; }
+
+    .deliverable-list {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0; margin-top: 24px;
+      border: 1px solid var(--border); list-style: none; padding: 0;
+    }
+    .deliverable-list li {
+      padding: 10px 16px; font-size: 12px; font-weight: 600;
+      color: var(--navy); letter-spacing: 0.04em;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .deliverable-list li:nth-child(even) { border-right: none; }
+    .deliverable-list li::before {
+      content: '→ '; color: var(--steel); font-size: 11px;
+    }
+
+    .consulting-note {
+      background: var(--steel-pale);
+      border-left: 4px solid var(--steel);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .consulting-note p { margin-bottom: 0; font-size: 14px; color: var(--mid); }
+    .consulting-note strong { color: var(--navy); }
+
+    @media (max-width: 760px) {
+      .deliverable-list { grid-template-columns: 1fr; }
+      .deliverable-list li { border-right: none; }
+    }
+  </style>
 </head>
 <body>
 <div class="page-wrap">
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
+    <a class="nav-logo" href="/index.html">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;">
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="training.html">Training &amp; Assessment</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/training/">Training &amp; Assessment</a></li>
+      <li><a href="/talent.html">Talent Profiles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 
+<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="container">
-    <div class="section-label" style="color:var(--steel-light);">What We Offer</div>
-    <h1>Services</h1>
-    <p>Specific, deliverable-focused consulting for industrial and manufacturing businesses. No vague frameworks — just clear work product that gets used.</p>
+    <div class="section-label" style="color:var(--steel-light);">Operations Consulting</div>
+    <h1>When You Need More Than a Profile</h1>
+    <p>For manufacturers facing compliance gaps, audit preparation, SOP documentation, or operational improvements — targeted consulting engagements built on real floor experience. Available for the right projects.</p>
   </div>
 </section>
 
 <section>
   <div class="container">
 
+    <div class="consulting-note">
+      <p><strong>A note on how we work:</strong> Consulting is offered selectively alongside our core training and talent profile services. We take on engagements where our specific expertise — fabrication operations, welding compliance, pharma/food-grade documentation — adds real value. If your need is outside that lane, we'll tell you directly rather than take the work.</p>
+    </div>
+
+    <!-- SERVICE 01 -->
     <div class="service-full">
       <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:16px;">
         <span class="service-number">01</span>
-        <div><h2 style="margin-bottom:8px;">Process Documentation &amp; SOP Development</h2><div class="rule-accent"></div></div>
+        <div>
+          <h2 style="margin-bottom:8px;">Process Documentation &amp; SOP Development</h2>
+          <div class="rule-accent"></div>
+        </div>
       </div>
       <p>Most small operations run on institutional knowledge — processes that live in experienced employees' heads with no written record. When that knowledge walks out the door, it takes years of accumulated operational intelligence with it. Setpoint Advisors develops written standard operating procedures and work instructions that capture what your best people know and make it repeatable, trainable, and auditable.</p>
       <p>SOPs are written for the people who actually use them — field-level language, logical sequence, specific enough to be useful. Not the kind of document that gets filed and forgotten.</p>
       <ul class="deliverable-list">
-        <li>Standard Operating Procedures (SOPs)</li><li>Written Work Instructions</li>
-        <li>Job Setup Sheets &amp; Travelers</li><li>Inspection Checksheets</li>
-        <li>Process Flow Documentation</li><li>Training Checklists</li>
+        <li>Standard Operating Procedures (SOPs)</li>
+        <li>Written Work Instructions</li>
+        <li>Job Setup Sheets &amp; Travelers</li>
+        <li>Inspection Checksheets</li>
+        <li>Process Flow Documentation</li>
+        <li>Training Checklists</li>
       </ul>
     </div>
 
+    <!-- SERVICE 02 -->
     <div class="service-full">
       <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:16px;">
         <span class="service-number">02</span>
-        <div><h2 style="margin-bottom:8px;">Operational Gap Analysis</h2><div class="rule-accent"></div></div>
+        <div>
+          <h2 style="margin-bottom:8px;">Operational Gap Analysis</h2>
+          <div class="rule-accent"></div>
+        </div>
       </div>
       <p>A structured review of your operation that identifies where you're exposed before a customer audit, a key employee departure, or a quality failure makes it obvious. Gap analysis engagements produce a prioritized findings report with specific, actionable recommendations — not a generic list of best practices.</p>
       <p>Common finding areas include documentation gaps, scheduling and capacity visibility, inspection record integrity, purchasing controls, and training documentation. Every finding is rated by priority and paired with a concrete corrective action.</p>
       <ul class="deliverable-list">
-        <li>Operations Review &amp; Site Assessment</li><li>Prioritized Findings Report</li>
-        <li>Corrective Action Roadmap</li><li>Implementation Sequencing</li>
-        <li>Follow-Up Review (optional)</li><li>Executive Summary for Leadership</li>
+        <li>Operations Review &amp; Site Assessment</li>
+        <li>Prioritized Findings Report</li>
+        <li>Corrective Action Roadmap</li>
+        <li>Implementation Sequencing</li>
+        <li>Follow-Up Review (optional)</li>
+        <li>Executive Summary for Leadership</li>
       </ul>
     </div>
 
+    <!-- SERVICE 03 -->
     <div class="service-full">
       <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:16px;">
         <span class="service-number">03</span>
-        <div><h2 style="margin-bottom:8px;">Compliance Research &amp; Regulatory Support</h2><div class="rule-accent"></div></div>
+        <div>
+          <h2 style="margin-bottom:8px;">Compliance Research &amp; Regulatory Support</h2>
+          <div class="rule-accent"></div>
+        </div>
       </div>
       <p>Regulatory requirements are dense, often poorly written, and frequently misunderstood. Setpoint Advisors translates applicable standards into plain-language requirements your team can actually follow — and identifies where your current practices create compliance exposure.</p>
       <p>Work includes OSHA standards interpretation, welding code compliance (AWS D1.1, API 1104), industry-specific regulatory research, safety training content review, and documentation required to demonstrate compliance to customers or regulatory bodies.</p>
       <ul class="deliverable-list">
-        <li>Regulatory Research &amp; Interpretation</li><li>Compliance Gap Identification</li>
-        <li>OSHA Standards Support</li><li>Safety Training Evaluation</li>
-        <li>Compliance Documentation</li><li>Customer Audit Preparation</li>
+        <li>Regulatory Research &amp; Interpretation</li>
+        <li>Compliance Gap Identification</li>
+        <li>OSHA Standards Support</li>
+        <li>Safety Training Evaluation</li>
+        <li>Compliance Documentation</li>
+        <li>Customer Audit Preparation</li>
       </ul>
     </div>
 
+    <!-- SERVICE 04 -->
     <div class="service-full">
       <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:16px;">
         <span class="service-number">04</span>
-        <div><h2 style="margin-bottom:8px;">Welding Procedure Review</h2><div class="rule-accent"></div></div>
+        <div>
+          <h2 style="margin-bottom:8px;">Welding Procedure Review</h2>
+          <div class="rule-accent"></div>
+        </div>
       </div>
       <p>Welding documentation is a compliance requirement that many job shops handle informally — until a customer audit or a weld failure claim makes the gap impossible to ignore. Setpoint Advisors supports welder qualification documentation, reviews existing records for completeness and code compliance, and assists with inspection documentation and passivation procedures for regulated end-use environments.</p>
-      <p>Work is grounded in AWS D1.1 Structural Welding Code and applicable standards, performed by a CAWI-certified inspector actively pursuing CWI — someone who has performed GMAW, FCAW, and GTAW in production environments, not a desk consultant reading the code for the first time.</p>
+      <p>Work is grounded in AWS D1.1 Structural Welding Code and applicable standards, performed by a CAWI-certified inspector — someone who has performed GMAW, FCAW, and GTAW in production environments, not a desk consultant reading the code for the first time.</p>
       <ul class="deliverable-list">
-        <li>Welder Qualification Support</li><li>AWS D1.1 Compliance Review</li>
-        <li>Welding Inspection Document Review</li><li>Passivation Procedures (SS / Pharma)</li>
-        <li>Quality Record Systems</li><li>Customer Audit Preparation</li>
+        <li>Welder Qualification Support</li>
+        <li>AWS D1.1 Compliance Review</li>
+        <li>Welding Inspection Document Review</li>
+        <li>Passivation Procedures (SS / Pharma)</li>
+        <li>Quality Record Systems</li>
+        <li>Customer Audit Preparation</li>
       </ul>
     </div>
 
+    <!-- SERVICE 05 -->
     <div class="service-full">
       <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:16px;">
         <span class="service-number">05</span>
-        <div><h2 style="margin-bottom:8px;">Supply Chain &amp; Logistics Systems</h2><div class="rule-accent"></div></div>
+        <div>
+          <h2 style="margin-bottom:8px;">Supply Chain &amp; Logistics Systems</h2>
+          <div class="rule-accent"></div>
+        </div>
       </div>
       <p>Purchasing driven by phone calls and relationships, material shortages discovered at the machine rather than during planning, no approved vendor list, no material traceability — these operational patterns quietly cost money every day. Setpoint Advisors helps small operations build purchasing controls, material management systems, and logistics documentation that scale with the business.</p>
       <ul class="deliverable-list">
-        <li>Approved Vendor List Development</li><li>Purchase Order Systems</li>
-        <li>Material Traceability Documentation</li><li>Reorder Point &amp; Inventory Controls</li>
-        <li>Supplier Performance Frameworks</li><li>Logistics Process Documentation</li>
+        <li>Approved Vendor List Development</li>
+        <li>Purchase Order Systems</li>
+        <li>Material Traceability Documentation</li>
+        <li>Reorder Point &amp; Inventory Controls</li>
+        <li>Supplier Performance Frameworks</li>
+        <li>Logistics Process Documentation</li>
       </ul>
     </div>
 
   </div>
 </section>
 
+<!-- ALSO AVAILABLE -->
 <section class="alt">
   <div class="container">
     <div class="section-label">Also Available</div>
-    <h2 style="margin-bottom:8px;">Looking for Training &amp; Assessment Development?</h2>
+    <h2 style="margin-bottom:8px;">Looking for Training Content or Validated Candidates?</h2>
     <div class="rule-accent"></div>
-    <p style="max-width:620px;">Setpoint Advisors also works with eLearning platforms, publishers, certification bodies, and academic programs as an industrial subject matter expert — providing exam review and rebalancing, original item writing, curriculum alignment, and technical content review across welding, CNC, robotics, metallurgy, and more.</p>
-    <a href="training.html" class="btn btn-primary">View Training &amp; Assessment Capabilities</a>
+    <p style="max-width:620px;">Our core services are technical training and curriculum development for publishers and programs, and validated talent profiles for manufacturers hiring skilled tradespeople. Both backed by the same floor-level expertise.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:24px;">
+      <a href="/training/" class="btn btn-primary">Training &amp; Assessment Services</a>
+      <a href="/talent.html" class="btn btn-outline" style="margin-left:0;">Talent Profile Packages</a>
+    </div>
   </div>
 </section>
 
+<!-- CALLOUT -->
 <section class="callout-strip">
   <div class="container">
     <h2>Not sure which service fits?</h2>
     <p>Start with a conversation. Most engagements begin with a brief operational review — we identify the highest-priority gaps and build from there.</p>
-    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-inner">
-    <span class="footer-copy">&copy; 2026 Setpoint Advisors &mdash; griffin@setpointadvisors.com</span>
+    <div class="footer-brand">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:36px;width:auto;opacity:0.7;margin-bottom:8px;">
+      <span class="footer-copy">&copy; 2026 Setpoint Advisors</span>
+      <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
+    </div>
     <div class="footer-links">
-      <a href="services.html">Services</a>
-      <a href="training.html">Training &amp; Assessment</a>
-      <a href="about.html">About</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank">LinkedIn</a>
+      <a href="/training/">Training &amp; Assessment</a>
+      <a href="/talent.html">Talent Profiles</a>
+      <a href="/consulting/">Consulting</a>
+      <a href="/about.html">About</a>
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 </footer>

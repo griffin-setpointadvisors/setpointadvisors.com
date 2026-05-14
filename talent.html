@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Setpoint Advisors Talent Profiles — validated, shop-floor-ready candidate assessments for manufacturers hiring welders, machinists, CNC operators, and fabricators. You make the hire. We remove the risk.">
+  <meta name="keywords" content="skilled trades hiring, welder assessment, machinist vetting, CNC operator profiles, manufacturing talent, validated candidate profiles, Buffalo NY, upstate New York">
+  <meta name="author" content="Griffin McGuire, Setpoint Advisors">
+  <title>Validated Talent Profiles | Setpoint Advisors</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+
+    /* PAGE HEADER */
+    .page-header {
+      background: var(--navy); padding: 72px 0 64px; position: relative; overflow: hidden;
+    }
+    .page-header::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 80% 50%, rgba(74,127,165,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-header::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--steel) 0%, var(--steel-light) 50%, var(--steel) 100%);
+    }
+    .page-header h1 { color: var(--white); margin-bottom: 16px; }
+    .page-header p { color: #8fa8be; max-width: 560px; margin-bottom: 0; font-size: 15px; line-height: 1.85; }
+
+    /* STAT BANNER */
+    .stat-banner {
+      background: var(--steel-pale);
+      border-bottom: 2px solid var(--border);
+      padding: 36px 0;
+    }
+    .stat-banner-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      text-align: center;
+    }
+    .stat-banner-item {
+      padding: 0 24px;
+      border-right: 1px solid var(--border);
+    }
+    .stat-banner-item:last-child { border-right: none; }
+    .stat-banner-num {
+      font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1; margin-bottom: 6px;
+    }
+    .stat-banner-label {
+      font-size: 12px; color: var(--muted); line-height: 1.4;
+    }
+
+    /* HOW IT WORKS — AUDIENCE SPLIT */
+    .audience-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-top: 44px;
+    }
+    .audience-panel {
+      padding: 40px 36px;
+    }
+    .audience-panel.panel-employer {
+      background: var(--navy);
+      border-right: 1px solid rgba(74,127,165,0.3);
+    }
+    .audience-panel.panel-employer h3 { color: var(--white); margin-bottom: 20px; }
+    .audience-panel.panel-employer p { color: #8fa8be; font-size: 13px; }
+    .audience-panel.panel-employer .serve-tag { color: var(--steel-light); border-color: rgba(74,127,165,0.4); }
+    .audience-panel.panel-candidate {
+      background: var(--off-white);
+    }
+    .audience-panel.panel-candidate h3 { margin-bottom: 20px; }
+    .audience-panel.panel-candidate .serve-tag { color: var(--steel); border-color: var(--border); }
+
+    .process-steps { list-style: none; padding: 0; margin: 0; counter-reset: steps; }
+    .process-step {
+      display: flex; gap: 16px; align-items: flex-start;
+      padding: 14px 0; border-bottom: 1px solid rgba(208,220,232,0.2);
+      counter-increment: steps;
+    }
+    .process-step:last-child { border-bottom: none; padding-bottom: 0; }
+    .step-num {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      color: var(--steel-light); min-width: 20px; padding-top: 2px;
+    }
+    .audience-panel.panel-candidate .step-num { color: var(--steel); }
+    .step-text {
+      font-size: 13px; line-height: 1.55;
+    }
+    .audience-panel.panel-employer .step-text { color: #8fa8be; }
+    .step-text strong { display: block; font-weight: 600; margin-bottom: 2px; }
+    .audience-panel.panel-employer .step-text strong { color: var(--white); }
+    .audience-panel.panel-candidate .step-text strong { color: var(--navy); }
+
+    /* WHAT'S IN A PROFILE */
+    .profile-contents {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 40px;
+      border: 1px solid var(--border);
+    }
+    .profile-item {
+      padding: 28px 24px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--white);
+    }
+    .profile-item:nth-child(3n) { border-right: none; }
+    .profile-item:nth-last-child(-n+3) { border-bottom: none; }
+    .profile-item-icon {
+      width: 28px; height: 3px; background: var(--steel); margin-bottom: 14px;
+    }
+    .profile-item h4 {
+      font-size: 12px; font-weight: 700; color: var(--navy);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;
+    }
+    .profile-item p {
+      font-size: 12px; color: var(--muted); margin: 0; line-height: 1.55;
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 44px;
+      border: 1px solid var(--border);
+    }
+    .pricing-card {
+      padding: 36px 24px;
+      border-right: 1px solid var(--border);
+      background: var(--white);
+      text-align: center;
+      position: relative;
+      transition: background 0.18s;
+    }
+    .pricing-card:last-child { border-right: none; }
+    .pricing-card:hover { background: var(--steel-pale); }
+    .pricing-card.featured {
+      background: var(--navy);
+      border-top: 4px solid var(--orange);
+    }
+    .pricing-card.featured:hover { background: var(--mid); }
+    .featured-label {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: var(--orange); color: var(--white);
+      font-size: 9px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; padding: 3px 12px;
+    }
+    .pkg-name {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--steel); margin-bottom: 16px; display: block;
+    }
+    .pricing-card.featured .pkg-name { color: var(--steel-light); }
+    .pkg-price {
+      font-size: 2.2rem; font-weight: 700; color: var(--navy);
+      line-height: 1; display: block; margin-bottom: 6px;
+    }
+    .pricing-card.featured .pkg-price { color: var(--white); }
+    .pkg-unit {
+      font-size: 11px; color: var(--muted); margin-bottom: 20px; display: block;
+    }
+    .pricing-card.featured .pkg-unit { color: #8fa8be; }
+    .pkg-desc {
+      font-size: 12px; color: var(--muted); line-height: 1.55; margin-bottom: 24px;
+    }
+    .pricing-card.featured .pkg-desc { color: #8fa8be; }
+    .pkg-cta {
+      display: inline-block; width: 100%; padding: 10px 0;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; border: 2px solid var(--steel);
+      color: var(--steel); background: transparent;
+      transition: all 0.18s; border-radius: 2px;
+    }
+    .pkg-cta:hover { background: var(--steel); color: var(--white); }
+    .pricing-card.featured .pkg-cta {
+      border-color: rgba(255,255,255,0.4); color: var(--white);
+    }
+    .pricing-card.featured .pkg-cta:hover {
+      background: rgba(255,255,255,0.15); border-color: var(--white);
+    }
+
+    /* RETAINER CALLOUT */
+    .retainer-strip {
+      margin-top: 20px;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      background: var(--white);
+      display: flex; align-items: center; justify-content: space-between; gap: 32px;
+    }
+    .retainer-strip h4 {
+      font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 4px;
+    }
+    .retainer-strip p { margin: 0; font-size: 13px; color: var(--muted); }
+    .retainer-strip .btn { white-space: nowrap; flex-shrink: 0; }
+
+    /* ROLES WE COVER */
+    .roles-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; margin-top: 36px; border: 1px solid var(--border);
+    }
+    .role-card {
+      padding: 20px 18px; border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border); background: var(--white);
+    }
+    .role-card:nth-child(4n) { border-right: none; }
+    .role-card:nth-last-child(-n+4) { border-bottom: none; }
+    .role-name {
+      font-size: 12px; font-weight: 700; color: var(--navy);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;
+    }
+    .role-skills { font-size: 11px; color: var(--muted); }
+
+    /* CREDENTIAL CALLOUT */
+    .cred-callout {
+      background: var(--steel-pale);
+      border-top: 3px solid var(--steel);
+      padding: 48px 0;
+    }
+    .cred-callout-inner {
+      display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center;
+    }
+    .cred-callout h2 { margin-bottom: 12px; }
+    .cred-callout p { color: var(--mid); max-width: 520px; margin-bottom: 0; }
+    .cred-badges-stacked { display: flex; flex-direction: column; gap: 8px; min-width: 200px; }
+    .cred-badge-item {
+      padding: 10px 16px; background: var(--white);
+      border: 1px solid var(--border); border-left: 3px solid var(--steel);
+      font-size: 11px; font-weight: 700; color: var(--navy); letter-spacing: 0.06em;
+    }
+
+    /* FAQ */
+    .faq-list { margin-top: 40px; }
+    .faq-item {
+      border-bottom: 1px solid var(--border); padding: 24px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q {
+      font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px;
+    }
+    .faq-a { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.7; }
+
+    @media (max-width: 760px) {
+      .stat-banner-inner { grid-template-columns: 1fr; gap: 24px; }
+      .stat-banner-item { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 24px; }
+      .stat-banner-item:last-child { border-bottom: none; }
+      .audience-split { grid-template-columns: 1fr; }
+      .audience-panel.panel-employer { border-right: none; border-bottom: 1px solid rgba(74,127,165,0.3); }
+      .profile-contents { grid-template-columns: 1fr 1fr; }
+      .profile-item:nth-child(3n) { border-right: 1px solid var(--border); }
+      .profile-item:nth-child(2n) { border-right: none; }
+      .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-card:nth-child(2n) { border-right: none; }
+      .pricing-card { border-bottom: 1px solid var(--border); }
+      .roles-grid { grid-template-columns: 1fr 1fr; }
+      .role-card:nth-child(2n) { border-right: none; }
+      .cred-callout-inner { grid-template-columns: 1fr; gap: 24px; }
+      .retainer-strip { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 480px) {
+      .profile-contents { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-card { border-right: none; }
+      .roles-grid { grid-template-columns: 1fr; }
+      .role-card { border-right: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/index.html">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/training/">Training &amp; Assessment</a></li>
+      <li><a href="/talent.html" class="active">Talent Profiles</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="section-label" style="color:var(--steel-light);">Validated Talent Profiles</div>
+    <h1>Hire with Confidence.<br>Stop Gambling on Unproven Talent.</h1>
+    <p>We assess and validate skilled tradespeople — welders, machinists, CNC operators, fabricators — using the same rigorous tools we build for national publishers and CTE programs. You receive a complete Talent Readiness Profile. You make all the hiring decisions. We remove the risk.</p>
+  </div>
+</section>
+
+<!-- STAT BANNER -->
+<div class="stat-banner">
+  <div class="container">
+    <div class="stat-banner-inner">
+      <div class="stat-banner-item">
+        <div class="stat-banner-num">$15K–$25K</div>
+        <div class="stat-banner-label">Average cost of a bad skilled trades hire<br>when you factor in lost productivity and starting over</div>
+      </div>
+      <div class="stat-banner-item">
+        <div class="stat-banner-num">5–10</div>
+        <div class="stat-banner-label">Business days to receive your<br>validated Talent Readiness Profile(s)</div>
+      </div>
+      <div class="stat-banner-item">
+        <div class="stat-banner-num">$0</div>
+        <div class="stat-banner-label">Cost to candidates — ever.<br>We source, assess, and deliver. They just show up.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section>
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2>A Process Built for Both Sides</h2>
+    <div class="rule-accent"></div>
+    <p style="max-width:600px;">Manufacturers get validated intelligence on every candidate before the first interview. Candidates get fairly evaluated by someone who actually understands the work. Nobody pays to play — only manufacturers pay, only for delivered profiles.</p>
+
+    <div class="audience-split">
+
+      <!-- EMPLOYER SIDE -->
+      <div class="audience-panel panel-employer">
+        <span class="serve-tag">For Manufacturers &amp; Job Shops</span>
+        <h3>The Buying Side</h3>
+        <ul class="process-steps">
+          <li class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-text">
+              <strong>Tell us what you need</strong>
+              Submit a short job spec — role type, key skills, shift details, any shop-specific priorities (food-grade welding, tight-tolerance machining, blueprint reading, etc.). Email, call, or use our contact form.
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-text">
+              <strong>Choose your package</strong>
+              Single profile, 3-pack, or 5-pack. Payment is for the assessment and validation work only — not placement fees. You are never locked into a hire.
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-text">
+              <strong>Receive your profiles</strong>
+              Within 5–10 business days (2–3 for expedited). Each profile includes full assessment results, verified competencies, a readiness score, and practical notes written for your shop environment.
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-text">
+              <strong>You take it from there</strong>
+              Review the profiles, schedule interviews directly with candidates, and handle all employment paperwork yourself. We simply remove the risk of hiring unproven talent.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CANDIDATE SIDE -->
+      <div class="audience-panel panel-candidate">
+        <span class="serve-tag">For Skilled Trades Candidates</span>
+        <h3>The Sourcing Side</h3>
+        <ul class="process-steps">
+          <li class="process-step">
+            <span class="step-num">01</span>
+            <div class="step-text">
+              <strong>Apply or get referred</strong>
+              We source through partnerships with Rochester-area and upstate NY technical schools, apprenticeship programs, AWS chapters, and direct applications. No fees. No gotchas.
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-num">02</span>
+            <div class="step-text">
+              <strong>Complete our validated assessment</strong>
+              Technical evaluations covering welding processes, CNC, machining, safety, blueprint reading, and job-specific skills — built from our curriculum library using the same standards as national publishers.
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-num">03</span>
+            <div class="step-text">
+              <strong>Personal review by a practitioner</strong>
+              As a CAWI with 10+ years on the shop floor, I personally score and calibrate every result against real production standards — not just answer keys.
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="step-num">04</span>
+            <div class="step-text">
+              <strong>Enter the Talent Pool</strong>
+              Approved candidates are added to our searchable database and matched to active manufacturer requests. You stay in the pool until matched — and you're never charged a thing.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S IN A PROFILE -->
+<section class="alt">
+  <div class="container">
+    <div class="section-label">The Deliverable</div>
+    <h2>What's Inside Every Talent Readiness Profile</h2>
+    <div class="rule-accent"></div>
+    <p style="max-width:600px;">Each profile is written for a hiring manager, not an HR department. You get everything you need to make a confident decision — nothing you don't.</p>
+
+    <div class="profile-contents">
+      <div class="profile-item">
+        <div class="profile-item-icon"></div>
+        <h4>Detailed Assessment Results</h4>
+        <p>Full scoring from our validated technical evaluations — the same rigorous tools built for national publishers and CTE programs.</p>
+      </div>
+      <div class="profile-item">
+        <div class="profile-item-icon"></div>
+        <h4>Verified Technical Competencies</h4>
+        <p>Welding processes, CNC programming, fabrication techniques, safety protocols, quality standards, and blueprint reading — scored and verified.</p>
+      </div>
+      <div class="profile-item">
+        <div class="profile-item-icon"></div>
+        <h4>Readiness Score</h4>
+        <p>A plain-language readiness rating calibrated against real production floor standards — not academic benchmarks.</p>
+      </div>
+      <div class="profile-item">
+        <div class="profile-item-icon"></div>
+        <h4>Strengths &amp; Gaps Summary</h4>
+        <p>Specific strengths to leverage and skill gaps to watch for — written so you know exactly what you're getting before the first interview.</p>
+      </div>
+      <div class="profile-item">
+        <div class="profile-item-icon"></div>
+        <h4>Shop-Specific Practical Notes</h4>
+        <p>Observations tailored to your shop environment and the role you submitted — not boilerplate language cut from a template.</p>
+      </div>
+      <div class="profile-item">
+        <div class="profile-item-icon"></div>
+        <h4>Contact Info &amp; Availability</h4>
+        <p>Direct candidate contact information and availability for immediate next steps. You reach out on your timeline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section>
+  <div class="container">
+    <div class="section-label">Packages &amp; Pricing</div>
+    <h2>Clear Pricing. No Placement Fees.</h2>
+    <div class="rule-accent"></div>
+    <p style="max-width:600px;">You pay for the assessment and validation work only. The fee is not contingent on hiring — it covers the intelligence you need to hire well. All packages include full Talent Readiness Profiles delivered within 5–10 business days.</p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <span class="pkg-name">Single Profile</span>
+        <span class="pkg-price">$1,200</span>
+        <span class="pkg-unit">one validated candidate</span>
+        <p class="pkg-desc">One fully assessed and validated Talent Readiness Profile. Ideal for filling a single opening or testing the process.</p>
+        <a href="/contact.html?pkg=single" class="pkg-cta">Get Started</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="featured-label">Best Value</span>
+        <span class="pkg-name">3-Pack</span>
+        <span class="pkg-price">$2,950</span>
+        <span class="pkg-unit">three validated candidates — $983 each</span>
+        <p class="pkg-desc">Three fully assessed profiles for multiple openings or comparing candidates for a critical role. Most popular package.</p>
+        <a href="/contact.html?pkg=3pack" class="pkg-cta">Get Started</a>
+      </div>
+
+      <div class="pricing-card">
+        <span class="pkg-name">5-Pack</span>
+        <span class="pkg-price">$4,500</span>
+        <span class="pkg-unit">five validated candidates — $900 each</span>
+        <p class="pkg-desc">For shops with multiple openings or ongoing hiring needs. Best per-profile value in the standard packages.</p>
+        <a href="/contact.html?pkg=5pack" class="pkg-cta">Get Started</a>
+      </div>
+
+      <div class="pricing-card">
+        <span class="pkg-name">Expedited</span>
+        <span class="pkg-price">$1,600</span>
+        <span class="pkg-unit">single profile in 2–3 business days</span>
+        <p class="pkg-desc">Urgent opening? Expedited profiles are prioritized and delivered within 2–3 business days rather than the standard window.</p>
+        <a href="/contact.html?pkg=expedited" class="pkg-cta">Get Started</a>
+      </div>
+
+    </div>
+
+    <!-- RETAINER -->
+    <div class="retainer-strip">
+      <div>
+        <h4>Ongoing Hiring Needs? Ask About the Monthly Retainer.</h4>
+        <p>For manufacturers with recurring openings — job shops always looking for welders, growing operations in expansion mode — we offer a monthly retainer arrangement with 2 profiles per month and rollover. Predictable cost, committed relationship, priority turnaround. Contact us to discuss.</p>
+      </div>
+      <a href="/contact.html?pkg=retainer" class="btn btn-primary">Inquire About Retainer</a>
+    </div>
+  </div>
+</section>
+
+<!-- ROLES WE COVER -->
+<section class="alt">
+  <div class="container">
+    <div class="section-label">Roles Covered</div>
+    <h2>Skilled Trades We Assess</h2>
+    <div class="rule-accent"></div>
+    <p style="max-width:560px;">Our assessments are built from real shop floor experience across these trades. If your role isn't listed, contact us — we'll tell you honestly whether we can serve it well.</p>
+
+    <div class="roles-grid">
+      <div class="role-card">
+        <div class="role-name">Welder / Fitter</div>
+        <div class="role-skills">GMAW, FCAW, GTAW, SMAW · Structural, Pipe, Stainless, Pharma-grade</div>
+      </div>
+      <div class="role-card">
+        <div class="role-name">CNC Machinist</div>
+        <div class="role-skills">Programming, setup, operation · Mill and lathe · Blueprint reading</div>
+      </div>
+      <div class="role-card">
+        <div class="role-name">Fabricator</div>
+        <div class="role-skills">Layout, cutting, forming · Fit-up and assembly · Print interpretation</div>
+      </div>
+      <div class="role-card">
+        <div class="role-name">CNC Operator</div>
+        <div class="role-skills">Machine operation · Tooling changes · Basic quality inspection</div>
+      </div>
+      <div class="role-card">
+        <div class="role-name">Maintenance Mechanic</div>
+        <div class="role-skills">Mechanical troubleshooting · Preventive maintenance · Industrial safety</div>
+      </div>
+      <div class="role-card">
+        <div class="role-name">Quality Inspector</div>
+        <div class="role-skills">Measurement tools · Visual inspection · Document control basics</div>
+      </div>
+      <div class="role-card">
+        <div class="role-name">Press Operator</div>
+        <div class="role-skills">Stamping, forming · Die setup · Safety compliance</div>
+      </div>
+      <div class="role-card">
+        <div class="role-name">General Production</div>
+        <div class="role-skills">Assembly · Material handling · Safety and LOTO fundamentals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIAL CALLOUT -->
+<div class="cred-callout">
+  <div class="container">
+    <div class="cred-callout-inner">
+      <div>
+        <div class="section-label">Why the Assessment Means Something</div>
+        <h2>Validated by Someone Who Has Done the Work</h2>
+        <p style="margin-top:14px;">The tools we use to assess candidates are the same tools we build for national publishers and CTE programs. Every profile is personally reviewed by a CAWI-certified inspector with 10+ years of fabrication and operations experience — active on the shop floor, not just familiar with the standards. When we say a candidate is shop-floor ready, it means something.</p>
+      </div>
+      <div class="cred-badges-stacked">
+        <div class="cred-badge-item">CAWI — Certified Associate Welding Inspector</div>
+        <div class="cred-badge-item">10+ Years Fabrication &amp; Industrial Operations</div>
+        <div class="cred-badge-item">AWS District 6 — Membership Chair</div>
+        <div class="cred-badge-item">Weld-Off Judge — 2nd Consecutive Year, 2026</div>
+        <div class="cred-badge-item">SME &amp; Item Writer — National Publishers, CTE</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-label">Common Questions</div>
+    <h2>FAQ</h2>
+    <div class="rule-accent"></div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Is this a staffing agency? Are you placing employees?</div>
+        <p class="faq-a">No. Setpoint Advisors is a technical assessment firm. We deliver validated candidate profiles — the assessment and intelligence work. You make all hiring decisions, conduct all interviews, and handle all employment paperwork directly with candidates. We are not involved in the employment relationship.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if you don't have a match in your existing pool?</div>
+        <p class="faq-a">If no current pool candidates match your spec, we'll tell you immediately and run targeted sourcing and fresh assessments. Timeline may extend slightly in this case — typically 7–12 business days rather than 5–10. We will not send you a profile that doesn't meet your requirements just to fill the order.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if a profile doesn't work out?</div>
+        <p class="faq-a">Our assessments are designed to surface capability and readiness, not guarantee a cultural or interpersonal fit — that's for you to evaluate in the interview. If a candidate misrepresented their background or if there's a material discrepancy between our profile and what you find in the interview, contact us and we'll discuss a resolution on a case-by-case basis.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you cover roles outside Western / Central New York?</div>
+        <p class="faq-a">Our primary sourcing network is upstate New York — Rochester, Buffalo, Syracuse, and surrounding areas. We can serve employers anywhere in the Northeast, but our candidate pool is strongest in this region. If you're outside the area, contact us and we'll give you an honest read on what we can realistically deliver.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do candidates apply?</div>
+        <p class="faq-a">Candidates can apply through our contact page using the "Join Our Talent Pool" option, be referred by a school or apprenticeship program we partner with, or be sourced through our AWS chapter network and LinkedIn outreach. There is no cost to candidates at any point in the process.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What roles can you assess?</div>
+        <p class="faq-a">Our strongest coverage is welding (all processes), CNC machining and operation, general fabrication, quality inspection, and production roles. See the full list above. If your role is adjacent to those trades, contact us — we'll tell you honestly whether we can serve it well rather than overstate our capabilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALLOUT -->
+<section class="callout-strip">
+  <div class="container">
+    <h2>Ready to stop gambling on unproven talent?</h2>
+    <p>Submit a job spec, choose your package, and receive fully validated profiles within 5–10 business days. No placement fees. You make the hire.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
+      <a href="/contact.html?inquiry=talent" class="btn btn-primary">Submit a Job Spec</a>
+      <a href="/contact.html?inquiry=candidate" class="btn btn-outline">Join the Talent Pool</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:36px;width:auto;opacity:0.7;margin-bottom:8px;">
+      <span class="footer-copy">&copy; 2026 Setpoint Advisors</span>
+      <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/training/">Training &amp; Assessment</a>
+      <a href="/talent.html">Talent Profiles</a>
+      <a href="/consulting/">Consulting</a>
+      <a href="/about.html">About</a>
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+</body>
+</html>

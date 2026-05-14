@@ -3,25 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Setpoint Advisors — Industrial operations consulting for manufacturers and assessment development for training organizations. Built on 10+ years of real floor experience.">
-  <meta name="keywords" content="operations consulting, manufacturing compliance, SOP development, welding procedure consulting, gap analysis, training assessment development, eLearning SME, Buffalo NY">
+  <meta name="description" content="Setpoint Advisors — Technical training content, validated talent profiles for skilled trades, and operations consulting. Built on 10+ years of real floor experience.">
+  <meta name="keywords" content="skilled trades recruiting, welding assessment, manufacturing talent profiles, training curriculum development, CTE assessment, AWS, CAWI, Buffalo NY, upstate New York">
   <meta name="author" content="Griffin McGuire, Setpoint Advisors">
-  <title>Setpoint Advisors | Industrial Operations Consulting &amp; Training Development</title>
+  <title>Setpoint Advisors | Skilled Trades Talent &amp; Training</title>
   <link rel="stylesheet" href="/style.css">
+  <style>
+    /* THREE-LANE SERVE SECTION */
+    .serve-three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 44px;
+      border: 1px solid var(--border);
+    }
+    .serve-three .serve-panel {
+      padding: 36px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .serve-three .serve-panel:last-child { border-right: none; }
+    .serve-panel.panel-talent {
+      background: var(--steel);
+      color: var(--white);
+    }
+    .serve-panel.panel-talent h3 { color: var(--white); }
+    .serve-panel.panel-talent p { color: rgba(255,255,255,0.8); }
+    .serve-panel.panel-talent ul li { color: rgba(255,255,255,0.8); }
+    .serve-panel.panel-talent .serve-tag {
+      color: rgba(255,255,255,0.9);
+      border-color: rgba(255,255,255,0.3);
+    }
+    .serve-panel.panel-talent .btn-outline-white {
+      display: inline-block;
+      padding: 11px 24px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; border-radius: 2px;
+      border: 2px solid rgba(255,255,255,0.5);
+      color: var(--white);
+      transition: all 0.18s;
+      margin-top: 4px;
+    }
+    .serve-panel.panel-talent .btn-outline-white:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.12);
+    }
+    .serve-panel.panel-consulting-sm {
+      background: var(--off-white);
+    }
+    .serve-panel.panel-consulting-sm .serve-tag {
+      color: var(--muted);
+      border-color: var(--border);
+    }
+    .serve-panel.panel-consulting-sm p { font-size: 13px; color: var(--muted); }
+    .serve-panel.panel-consulting-sm .btn-text {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--steel);
+      text-decoration: none; border-bottom: 1px solid var(--steel);
+      padding-bottom: 2px;
+      transition: color 0.18s;
+      display: inline-block;
+      margin-top: 8px;
+    }
+    .serve-panel.panel-consulting-sm .btn-text:hover { color: var(--navy); border-color: var(--navy); }
+
+    /* TALENT HIGHLIGHT STRIP */
+    .talent-strip {
+      background: var(--steel-pale);
+      border-top: 3px solid var(--steel);
+      border-bottom: 3px solid var(--steel);
+      padding: 48px 0;
+    }
+    .talent-strip-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+    .talent-strip h2 { color: var(--navy); margin-bottom: 12px; }
+    .talent-strip p { color: var(--mid); max-width: 520px; margin-bottom: 0; }
+    .talent-strip .price-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 200px;
+    }
+    .price-badge {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--steel);
+    }
+    .price-badge .pkg-name {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--navy);
+    }
+    .price-badge .pkg-price {
+      font-size: 13px; font-weight: 700; color: var(--steel);
+    }
+    .price-badge.featured { border-left-color: var(--orange); background: var(--navy); }
+    .price-badge.featured .pkg-name { color: #b0c4d8; }
+    .price-badge.featured .pkg-price { color: var(--orange); }
+
+    /* PILLAR ICON OVERRIDE */
+    .pillar-icon { font-size: 22px; margin-bottom: 16px; }
+
+    @media (max-width: 760px) {
+      .serve-three { grid-template-columns: 1fr; }
+      .serve-three .serve-panel { border-right: none; border-bottom: 1px solid var(--border); }
+      .serve-three .serve-panel:last-child { border-bottom: none; }
+      .talent-strip-inner { grid-template-columns: 1fr; gap: 28px; }
+      .talent-strip .price-badges { flex-direction: row; flex-wrap: wrap; min-width: unset; }
+      .price-badge { flex: 1; min-width: 140px; }
+    }
+  </style>
 </head>
 <body>
 <div class="page-wrap">
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="/index.html"><img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
+    <a class="nav-logo" href="/index.html">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;">
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="/index.html" class="active">Home</a></li>
-      <li><a href="/consulting/">Consulting</a></li>
       <li><a href="/training/">Training &amp; Assessment</a></li>
+      <li><a href="/talent.html">Talent Profiles</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/portfolio.html">Portfolio</a></li>
       <li><a href="/contact.html">Contact</a></li>
@@ -33,16 +146,19 @@
 <section class="hero">
   <div class="container">
     <div class="hero-label">Setpoint Advisors</div>
-    <h1>Industrial Operations Consulting<br><span>Built on Real Floor Experience.</span></h1>
-    <p class="hero-body">Guidance for manufacturers on operations &amp; compliance. Technical expertise for training organizations. Both grounded in 10+ years of hands-on fabrication, CAWI certification, and active welding experience.</p>
+    <h1>Technical training.<br><span>Validated talent.</span><br>Real floor experience.</h1>
+    <p class="hero-body">We build assessment and curriculum content for training organizations and technical programs — and we connect manufacturers with shop-floor-ready tradespeople through our validated talent profile service. Everything backed by 10+ years of fabrication, a CAWI credential, and active presence in the trades community.</p>
     <div class="hero-ctas">
-      <a href="/consulting/" class="btn btn-primary">For Manufacturers: Operations &amp; Compliance Consulting</a>
-      <a href="/training/" class="btn btn-outline">For Training Organizations: Assessment &amp; Curriculum Services</a>
+      <a href="/training/" class="btn btn-primary">Training &amp; Assessment Content</a>
+      <a href="/talent.html" class="btn btn-outline">Validated Talent Profiles</a>
     </div>
+    <p style="margin-top:20px; margin-bottom:0; font-size:12px; color:rgba(144,168,190,0.7);">
+      Looking for operations consulting? <a href="/consulting/" style="color:var(--steel-light); border-bottom: 1px solid rgba(74,127,165,0.4);">We do that too.</a>
+    </p>
   </div>
 </section>
 
-<!-- WHY SETPOINT ADVISORS -->
+<!-- WHAT MAKES THE WORK DIFFERENT -->
 <section>
   <div class="container">
     <div class="section-label">Why Setpoint Advisors</div>
@@ -52,52 +168,98 @@
       <div class="pillar">
         <div class="pillar-icon">🔧</div>
         <h3>Field-Level, Not Theoretical</h3>
-        <p>We've run operations, managed production, and worked on the floor. Every recommendation comes from real manufacturing experience, not academic theory. Your procedures will work because we know what actually works.</p>
+        <p>We've run operations, managed production, and worked on the floor. Every assessment, curriculum, and candidate evaluation is grounded in real manufacturing experience — not academic theory.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">✓</div>
-        <h3>Deliverables That Get Used</h3>
-        <p>We don't create documents that go on a shelf. SOPs, procedures, assessments, and training materials are written to be understood and used by your team — in plain language, with practical examples.</p>
+        <h3>Validated by a Practitioner</h3>
+        <p>As a CAWI with 10+ years on the shop floor and active involvement in AWS, every candidate profile and training deliverable is personally reviewed against real production standards — not just multiple-choice answers.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">⚡</div>
-        <h3>AI-Augmented, Expert-Verified</h3>
-        <p>We leverage modern tools for efficiency and consistency, but every deliverable is reviewed, tested, and verified against real-world manufacturing standards and practices. Technology serves expertise, not the other way around.</p>
+        <h3>Built to Be Used</h3>
+        <p>Assessments that actually test what matters. Candidate profiles written for hiring managers, not HR departments. Curriculum that works in the classroom and on the floor. Deliverables that don't go on a shelf.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO WE SERVE -->
+<!-- WHO WE SERVE — THREE LANES -->
 <section class="alt">
   <div class="container">
     <div class="section-label">Who We Serve</div>
-    <h2>Two Types of Clients. One Foundation of Experience.</h2>
+    <h2>Three Services. One Foundation of Experience.</h2>
     <div class="rule-accent"></div>
-    <div class="serve-split">
+    <div class="serve-three">
+
+      <!-- LANE 1: TRAINING -->
       <div class="serve-panel panel-consulting">
-        <span class="serve-tag">For Manufacturers &amp; Job Shops</span>
-        <h3>Operations &amp; Compliance Problems We Solve</h3>
+        <span class="serve-tag">For Training Organizations &amp; Publishers</span>
+        <h3>Assessment &amp; Curriculum Development</h3>
         <ul>
-          <li>Need SOPs and documentation that actually reflect your processes</li>
-          <li>Facing customer audits and compliance gaps</li>
-          <li>Want operational improvements without large-firm overhead</li>
-          <li>Need to capture knowledge before key employees leave</li>
-          <li>Require specialized expertise in pharma/food-grade fabrication and welding compliance</li>
+          <li>Technical assessments written by practitioners, not theorists</li>
+          <li>Item writing, review, and alignment to AWS, NCCER, OSHA standards</li>
+          <li>Welding, CNC, fabrication, and industrial safety programs</li>
+          <li>eLearning SME and subject matter expertise for national publishers</li>
+          <li>CTE program curriculum built for real shop environments</li>
         </ul>
-        <a href="/consulting/" class="btn btn-primary">Explore Consulting Services</a>
+        <a href="/training/" class="btn btn-primary">Explore Training Services</a>
       </div>
-      <div class="serve-panel panel-training">
-        <span class="serve-tag">For Training Organizations, Publishers &amp; Platforms</span>
-        <h3>Training &amp; Assessment Problems We Solve</h3>
+
+      <!-- LANE 2: TALENT PROFILES -->
+      <div class="serve-panel panel-talent">
+        <span class="serve-tag">For Manufacturers &amp; Job Shops</span>
+        <h3>Validated Talent Profiles</h3>
         <ul>
-          <li>Need technical accuracy in assessments and curriculum</li>
-          <li>Want content written by practitioners, not theorists</li>
-          <li>Need subject matter experts who understand standards (AWS, NCCER, OSHA)</li>
-          <li>Require item writing, review, and alignment services</li>
-          <li>Building welding, CNC, automation, or industrial skills programs</li>
+          <li>Stop gambling on unproven candidates from job boards</li>
+          <li>Receive fully assessed, shop-floor-validated profiles</li>
+          <li>You make all hiring decisions — we remove the risk</li>
+          <li>Profiles include competency scores, readiness ratings, and practical notes</li>
+          <li>Candidates never pay — we source, assess, and deliver</li>
         </ul>
-        <a href="/training/" class="btn btn-primary">Explore Training &amp; Assessment Services</a>
+        <a href="/talent.html" class="btn-outline-white">See Packages &amp; Pricing</a>
+      </div>
+
+      <!-- LANE 3: CONSULTING -->
+      <div class="serve-panel panel-consulting-sm">
+        <span class="serve-tag">Operations Consulting</span>
+        <h3>When You Need More Than a Profile</h3>
+        <p>For manufacturers facing compliance gaps, audit preparation, SOP documentation, or operational improvements — we offer targeted consulting engagements built on real floor experience. Available for the right projects.</p>
+        <p style="margin-bottom:16px;">Specialized in pharma/food-grade fabrication, welding procedure compliance, and gap analysis for small to mid-size job shops.</p>
+        <a href="/consulting/" class="btn-text">Learn More →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TALENT PROFILE HIGHLIGHT -->
+<section class="talent-strip">
+  <div class="container">
+    <div class="talent-strip-inner">
+      <div>
+        <div class="section-label">Validated Talent Profiles</div>
+        <h2>Hire with Confidence.<br>Stop Gambling on Unproven Talent.</h2>
+        <p style="margin-top:14px;">The average cost of a bad hire in skilled manufacturing is $15,000–$25,000 when you factor in lost productivity, retraining, and starting over. Our validated profiles give you a shop-floor-ready assessment of every candidate before you spend a single hour interviewing. You review the profile, make the call, handle the paperwork. We remove the risk.</p>
+        <a href="/talent.html" class="btn btn-primary" style="margin-top:24px; display:inline-block;">View Packages &amp; How It Works</a>
+      </div>
+      <div class="price-badges">
+        <div class="price-badge">
+          <span class="pkg-name">Single Profile</span>
+          <span class="pkg-price">$1,200</span>
+        </div>
+        <div class="price-badge featured">
+          <span class="pkg-name">3-Pack</span>
+          <span class="pkg-price">$2,950</span>
+        </div>
+        <div class="price-badge">
+          <span class="pkg-name">5-Pack</span>
+          <span class="pkg-price">$4,500</span>
+        </div>
+        <div class="price-badge">
+          <span class="pkg-name">Expedited</span>
+          <span class="pkg-price">$1,600</span>
+        </div>
       </div>
     </div>
   </div>
@@ -108,11 +270,31 @@
   <div class="container">
     <div class="section-label">Credentials &amp; Community</div>
     <div class="cred-grid">
-      <div><div class="cred-label">Certification</div><div class="cred-value">CAWI</div><div class="cred-sub">Certified Associate Welding Inspector</div></div>
-      <div><div class="cred-label">Background</div><div class="cred-value">10+ Years</div><div class="cred-sub">Fabrication &amp; Industrial Operations</div></div>
-      <div><div class="cred-label">Assessment Work</div><div class="cred-value">SME &amp; Item Writer</div><div class="cred-sub">eLearning, Publishers, CTE Programs</div></div>
-      <div><div class="cred-label">Community</div><div class="cred-value">AWS District 6</div><div class="cred-sub">Niagara Frontier — Membership Chair</div></div>
-      <div><div class="cred-label">Event</div><div class="cred-value">Weld-Off Judge</div><div class="cred-sub">2nd Consecutive Year, 2026</div></div>
+      <div>
+        <div class="cred-label">Certification</div>
+        <div class="cred-value">CAWI</div>
+        <div class="cred-sub">Certified Associate Welding Inspector</div>
+      </div>
+      <div>
+        <div class="cred-label">Background</div>
+        <div class="cred-value">10+ Years</div>
+        <div class="cred-sub">Fabrication &amp; Industrial Operations</div>
+      </div>
+      <div>
+        <div class="cred-label">Assessment Work</div>
+        <div class="cred-value">SME &amp; Item Writer</div>
+        <div class="cred-sub">eLearning, Publishers, CTE Programs</div>
+      </div>
+      <div>
+        <div class="cred-label">Community</div>
+        <div class="cred-value">AWS District 6</div>
+        <div class="cred-sub">Niagara Frontier — Membership Chair</div>
+      </div>
+      <div>
+        <div class="cred-label">Event</div>
+        <div class="cred-value">Weld-Off Judge</div>
+        <div class="cred-sub">2nd Consecutive Year, 2026</div>
+      </div>
     </div>
   </div>
 </section>
@@ -123,7 +305,7 @@
     <div class="section-label">Recent Work</div>
     <h2>Sample Deliverables</h2>
     <div class="rule-accent"></div>
-    <p style="max-width:600px;">A mix of consulting and training work — because that's how we operate. Every deliverable is built on the same foundation of real industrial experience.</p>
+    <p style="max-width:600px;">A cross-section of training and consulting work — built on the same foundation of real industrial experience that informs every candidate assessment we deliver.</p>
     <div class="portfolio-preview">
       <div class="portfolio-card">
         <span class="category-badge consulting">Consulting</span>
@@ -157,7 +339,7 @@
 <section class="callout-strip">
   <div class="container">
     <h2>Ready to work with someone who has been there?</h2>
-    <p>Operations consulting for manufacturers. Assessment development for publishers and platforms. Both built on real industrial experience.</p>
+    <p>Training content for publishers and programs. Validated talent profiles for manufacturers. Consulting for the right engagement. All built on real industrial experience.</p>
     <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
   </div>
 </section>
@@ -170,8 +352,9 @@
       <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
     </div>
     <div class="footer-links">
-      <a href="/consulting/">Consulting</a>
       <a href="/training/">Training &amp; Assessment</a>
+      <a href="/talent.html">Talent Profiles</a>
+      <a href="/consulting/">Consulting</a>
       <a href="/about.html">About</a>
       <a href="/portfolio.html">Portfolio</a>
       <a href="/contact.html">Contact</a>
