@@ -1,27 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Setpoint Advisors sample work: SOP development, gap analysis, welding procedure review, training assessments, curriculum alignment, and test bank development.">
-  <meta name="keywords" content="SOP sample, gap analysis sample, welding consulting portfolio, manufacturing consulting examples, assessment development, item writing, curriculum alignment">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio samples from Setpoint Advisors — EHS knowledge assessment and scaffold safety training evaluation. Real assessment work by a CAWI-certified industrial SME.">
+  <meta name="keywords" content="assessment sample, EHS question bank, scaffold safety training evaluation, industrial SME portfolio, OSHA assessment, item writing sample, Griffin McGuire">
   <meta name="author" content="Griffin McGuire, Setpoint Advisors">
   <title>Portfolio | Setpoint Advisors</title>
   <link rel="stylesheet" href="/style.css">
+  <style>
+    .page-header {
+      background: var(--navy); padding: 64px 0 56px; position: relative; overflow: hidden;
+    }
+    .page-header::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--steel) 0%, var(--steel-light) 50%, var(--steel) 100%);
+    }
+    .page-header h1 { color: var(--white); margin-bottom: 16px; }
+    .page-header p { color: #8fa8be; max-width: 580px; margin-bottom: 0; }
+
+    /* SAMPLE BLOCK */
+    .sample-block {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sample-block:last-child { border-bottom: none; }
+
+    .sample-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+    .sample-meta {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px;
+    }
+    .meta-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; padding: 4px 12px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .meta-tag.primary {
+      background: var(--steel); color: var(--white); border-color: var(--steel);
+    }
+    .download-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 13px 24px; background: var(--navy); color: var(--white);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; border: 2px solid var(--navy);
+      text-decoration: none; white-space: nowrap; flex-shrink: 0;
+      transition: all 0.18s;
+    }
+    .download-btn:hover { background: var(--steel); border-color: var(--steel); color: var(--white); }
+    .download-btn svg { flex-shrink: 0; }
+
+    /* QUESTION CARD */
+    .question-card {
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+      background: var(--white);
+    }
+    .question-card:last-of-type { margin-bottom: 0; }
+    .q-header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 20px;
+      background: var(--navy);
+      border-bottom: 1px solid rgba(74,127,165,0.3);
+    }
+    .q-ref {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--steel-light);
+    }
+    .q-difficulty {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 3px 10px;
+      border: 1px solid rgba(74,127,165,0.4); color: var(--steel-light);
+    }
+    .q-difficulty.intermediate { border-color: rgba(232,118,42,0.5); color: #e8a06a; }
+    .q-body { padding: 20px; }
+    .q-stem {
+      font-size: 13px; color: var(--navy); font-weight: 600;
+      line-height: 1.65; margin-bottom: 18px;
+    }
+    .q-citation {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--steel);
+      margin-bottom: 16px; display: block;
+    }
+    .q-options { list-style: none; padding: 0; margin: 0 0 18px; display: flex; flex-direction: column; gap: 8px; }
+    .q-option {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 10px 14px; border: 1px solid var(--border);
+      font-size: 12px; color: var(--mid); line-height: 1.5;
+    }
+    .q-option.correct {
+      border-color: #2d7a4f; background: #f0faf5; color: #1a4d32;
+    }
+    .q-option-letter {
+      font-weight: 700; min-width: 16px; font-size: 11px;
+    }
+    .q-option.correct .q-option-letter { color: #2d7a4f; }
+    .q-rationale {
+      padding: 14px 16px;
+      background: var(--steel-pale);
+      border-left: 3px solid var(--steel);
+      font-size: 12px; color: var(--mid); line-height: 1.7;
+      margin-top: 4px;
+    }
+    .q-rationale strong { color: var(--navy); }
+
+    /* TOPIC TABLE */
+    .topic-table {
+      width: 100%; border-collapse: collapse;
+      border: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    .topic-table th {
+      background: var(--navy); color: var(--white);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 10px 16px;
+      text-align: left; border-right: 1px solid rgba(74,127,165,0.3);
+    }
+    .topic-table th:last-child { border-right: none; }
+    .topic-table td {
+      padding: 10px 16px; font-size: 12px; color: var(--mid);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .topic-table td:last-child { border-right: none; }
+    .topic-table tr:last-child td { border-bottom: none; }
+    .topic-table tr:nth-child(even) td { background: var(--off-white); }
+    .diff-badge {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 2px 8px; border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .diff-badge.beginner { border-color: #2d7a4f; color: #2d7a4f; }
+    .diff-badge.intermediate { border-color: var(--orange); color: var(--orange); }
+    .diff-badge.advanced { border-color: var(--steel); color: var(--steel); }
+    .diff-badge.expert { border-color: var(--navy); color: var(--navy); }
+
+    /* FINDINGS TABLE */
+    .findings-table {
+      width: 100%; border-collapse: collapse;
+      border: 1px solid var(--border);
+      margin: 24px 0 0;
+    }
+    .findings-table th {
+      background: var(--navy); color: var(--white);
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 10px 16px;
+      text-align: left; border-right: 1px solid rgba(74,127,165,0.3);
+    }
+    .findings-table th:last-child { border-right: none; }
+    .findings-table td {
+      padding: 12px 16px; font-size: 12px; color: var(--mid);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top; line-height: 1.6;
+    }
+    .findings-table td:last-child { border-right: none; }
+    .findings-table tr:last-child td { border-bottom: none; }
+    .findings-table td:first-child { font-weight: 700; color: var(--navy); white-space: nowrap; }
+    .sev-badge {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 3px 10px; display: inline-block;
+    }
+    .sev-high { background: #fdf0ec; border: 1px solid #d9603a; color: #d9603a; }
+    .sev-moderate { background: #fef8ec; border: 1px solid var(--orange); color: #b85e00; }
+
+    /* EXEC SUMMARY BOX */
+    .exec-summary {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+      border: 1px solid var(--border); margin-bottom: 32px;
+    }
+    .exec-summary-meta {
+      background: var(--navy); padding: 28px 28px;
+    }
+    .exec-summary-meta table { width: 100%; border-collapse: collapse; }
+    .exec-summary-meta td {
+      padding: 8px 0; font-size: 12px;
+      border-bottom: 1px solid rgba(74,127,165,0.2);
+      vertical-align: top;
+    }
+    .exec-summary-meta tr:last-child td { border-bottom: none; }
+    .exec-summary-meta td:first-child {
+      font-weight: 700; font-size: 10px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--steel-light);
+      padding-right: 20px; white-space: nowrap;
+    }
+    .exec-summary-meta td:last-child { color: #c8d8e8; }
+    .overall-rating {
+      font-weight: 700; color: var(--orange) !important;
+    }
+    .exec-summary-text {
+      padding: 28px 28px; background: var(--off-white);
+    }
+    .exec-summary-text p {
+      font-size: 13px; color: var(--mid); line-height: 1.75; margin: 0;
+    }
+    .exec-summary-text p + p { margin-top: 12px; }
+
+    .sample-divider {
+      display: flex; align-items: center; gap: 16px;
+      margin: 12px 0 32px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--steel);
+    }
+    .sample-divider::before, .sample-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    .more-questions-note {
+      padding: 16px 20px; border: 1px solid var(--border);
+      border-left: 3px solid var(--steel);
+      background: var(--white);
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 20px; margin-top: 20px;
+    }
+    .more-questions-note p {
+      font-size: 12px; color: var(--muted); margin: 0;
+    }
+    .more-questions-note strong { color: var(--navy); }
+
+    @media (max-width: 760px) {
+      .sample-header { grid-template-columns: 1fr; }
+      .exec-summary { grid-template-columns: 1fr; }
+      .findings-table td:nth-child(3) { display: none; }
+      .findings-table th:nth-child(3) { display: none; }
+    }
+  </style>
 </head>
 <body>
 <div class="page-wrap">
 
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="/index.html"><img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;"></a>
+    <a class="nav-logo" href="/index.html">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;">
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
       <li><a href="/index.html">Home</a></li>
-      <li><a href="/consulting/">Consulting</a></li>
       <li><a href="/training/">Training &amp; Assessment</a></li>
+      <li><a href="/talent.html">Talent Profiles</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/portfolio.html" class="active">Portfolio</a></li>
       <li><a href="/contact.html">Contact</a></li>
@@ -29,106 +253,267 @@
   </div>
 </nav>
 
+<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="container">
     <div class="section-label" style="color:var(--steel-light);">Sample Work</div>
     <h1>Portfolio</h1>
-    <p>Sample deliverables produced to demonstrate the quality and format of Setpoint Advisors work product. All client information is fictitious. These represent the standard of deliverable you can expect from an engagement.</p>
+    <p>Two samples of real work — an EHS knowledge assessment and a compliance-based training evaluation. Full PDFs available to download. No request form, no gate.</p>
   </div>
 </section>
 
 <section>
   <div class="container">
 
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="consulting">Consulting</button>
-      <button class="filter-btn" data-filter="training">Training</button>
+    <!-- ============================================================ -->
+    <!-- SAMPLE 1: EHS ASSESSMENT -->
+    <!-- ============================================================ -->
+    <div class="sample-block">
+
+      <div class="sample-header">
+        <div>
+          <div class="doc-type">Assessment Development</div>
+          <h2 style="margin-bottom:10px;">EHS Material Hazards Knowledge Assessment</h2>
+          <div class="rule-accent"></div>
+          <p style="max-width:600px;">A 10-question sample bank spanning hazard communication, respiratory hazards, chemical hazards, physical hazards, and environmental compliance. Scenario-grounded stems, plausible distractors, and detailed rationale for each answer. Written for a manufacturing EHS context.</p>
+          <div class="sample-meta">
+            <span class="meta-tag primary">Assessment Development</span>
+            <span class="meta-tag">OSHA 29 CFR</span>
+            <span class="meta-tag">EPA RCRA</span>
+            <span class="meta-tag">NFPA 30</span>
+            <span class="meta-tag">ACGIH TLVs</span>
+            <span class="meta-tag">10 Questions</span>
+          </div>
+        </div>
+        <a href="/assets/EHS_Material_Hazards_Assessment_Sample.pdf" download class="download-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download Full PDF
+        </a>
+      </div>
+
+      <!-- TOPIC TABLE -->
+      <div class="sample-divider">Question Bank — All 10 Topics</div>
+      <table class="topic-table">
+        <thead>
+          <tr>
+            <th style="width:40px;">#</th>
+            <th>Subtopic</th>
+            <th>Description</th>
+            <th>Difficulty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Q1</td><td>Hazard Communication</td><td>SDS Section Identification</td><td><span class="diff-badge beginner">Beginner</span></td></tr>
+          <tr><td>Q2</td><td>Hazard Communication</td><td>GHS Pictogram Recognition</td><td><span class="diff-badge beginner">Beginner</span></td></tr>
+          <tr><td>Q3</td><td>Respiratory Hazards</td><td>Permissible Exposure Limits &amp; Action Levels</td><td><span class="diff-badge intermediate">Intermediate</span></td></tr>
+          <tr><td>Q4</td><td>Chemical Hazards</td><td>Flammable Liquid Storage Requirements</td><td><span class="diff-badge intermediate">Intermediate</span></td></tr>
+          <tr><td>Q5</td><td>Physical Hazards</td><td>Compressed Gas Cylinder Safety</td><td><span class="diff-badge beginner">Beginner</span></td></tr>
+          <tr><td>Q6</td><td>Chemical Hazards</td><td>Hexavalent Chromium Exposure Controls</td><td><span class="diff-badge advanced">Advanced</span></td></tr>
+          <tr><td>Q7</td><td>Hazardous Waste &amp; Compliance</td><td>RCRA Satellite Accumulation Requirements</td><td><span class="diff-badge intermediate">Intermediate</span></td></tr>
+          <tr><td>Q8</td><td>Respiratory Hazards</td><td>Respirator Selection &amp; Assigned Protection Factors</td><td><span class="diff-badge advanced">Advanced</span></td></tr>
+          <tr><td>Q9</td><td>Physical Hazards</td><td>Noise Exposure &amp; Hearing Conservation Triggers</td><td><span class="diff-badge intermediate">Intermediate</span></td></tr>
+          <tr><td>Q10</td><td>Chemical Hazards</td><td>Lead Exposure — Medical Removal Protection</td><td><span class="diff-badge expert">Expert</span></td></tr>
+        </tbody>
+      </table>
+
+      <!-- Q1 -->
+      <div class="sample-divider">Sample Questions — Q1 through Q3</div>
+
+      <div class="question-card">
+        <div class="q-header">
+          <span class="q-ref">Q1 — Hazard Communication / SDS Section Identification</span>
+          <span class="q-difficulty">Beginner</span>
+        </div>
+        <div class="q-body">
+          <span class="q-citation">Ref: OSHA 29 CFR 1910.1200</span>
+          <p class="q-stem">A maintenance technician needs to determine the proper personal protective equipment (PPE) required before working with a chemical. Which section of a Safety Data Sheet (SDS) provides this information?</p>
+          <ul class="q-options">
+            <li class="q-option"><span class="q-option-letter">A.</span>Section 2 — Hazard Identification</li>
+            <li class="q-option"><span class="q-option-letter">B.</span>Section 4 — First-Aid Measures</li>
+            <li class="q-option correct"><span class="q-option-letter">C.</span>Section 8 — Exposure Controls / Personal Protection</li>
+            <li class="q-option"><span class="q-option-letter">D.</span>Section 11 — Toxicological Information</li>
+          </ul>
+          <div class="q-rationale"><strong>Correct: C.</strong> Section 8 — Exposure Controls / Personal Protection — specifies engineering controls, exposure limits (PELs/TLVs), and required PPE including respirator type, glove material, eye protection, and protective clothing. Section 2 identifies hazards but does not prescribe PPE. Section 4 covers emergency first aid. Section 11 details toxicology data relevant to medical evaluation, not day-to-day PPE selection.</div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question-card">
+        <div class="q-header">
+          <span class="q-ref">Q2 — Hazard Communication / GHS Pictogram Recognition</span>
+          <span class="q-difficulty">Beginner</span>
+        </div>
+        <div class="q-body">
+          <span class="q-citation">Ref: OSHA 29 CFR 1910.1200 / GHS</span>
+          <p class="q-stem">Which GHS pictogram — a flame over a circle — indicates what type of hazard on a chemical label?</p>
+          <ul class="q-options">
+            <li class="q-option"><span class="q-option-letter">A.</span>Flammable liquid</li>
+            <li class="q-option correct"><span class="q-option-letter">B.</span>Oxidizer</li>
+            <li class="q-option"><span class="q-option-letter">C.</span>Explosive</li>
+            <li class="q-option"><span class="q-option-letter">D.</span>Acute toxicity</li>
+          </ul>
+          <div class="q-rationale"><strong>Correct: B.</strong> The flame over a circle represents an oxidizing hazard — the substance can intensify fires by releasing oxygen. This is distinct from the simple flame pictogram (no circle), which denotes flammable liquids, solids, or gases. The exploding bomb represents explosives and unstable substances. The skull and crossbones represents acute toxicity. Recognizing GHS pictograms is a fundamental HazCom competency required by OSHA's GHS-aligned standard.</div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question-card">
+        <div class="q-header">
+          <span class="q-ref">Q3 — Respiratory Hazards / Permissible Exposure Limits &amp; Action Levels</span>
+          <span class="q-difficulty intermediate">Intermediate</span>
+        </div>
+        <div class="q-body">
+          <span class="q-citation">Ref: OSHA 29 CFR 1910.1000 / ACGIH TLVs</span>
+          <p class="q-stem">An industrial hygienist collects personal air samples in a machining area and finds airborne mineral oil mist concentrations averaging 3.5 mg/m³ over an 8-hour shift. OSHA's PEL for mineral oil mist is 5 mg/m³. Which of the following is the most appropriate immediate response?</p>
+          <ul class="q-options">
+            <li class="q-option"><span class="q-option-letter">A.</span>No action is required — the result is below the OSHA PEL</li>
+            <li class="q-option correct"><span class="q-option-letter">B.</span>Implement engineering controls immediately — the result exceeds the action level and warrants exposure reduction efforts</li>
+            <li class="q-option"><span class="q-option-letter">C.</span>Require all workers in the area to wear supplied-air respirators</li>
+            <li class="q-option"><span class="q-option-letter">D.</span>Shut down the machining operation until concentrations fall below 1 mg/m³</li>
+          </ul>
+          <div class="q-rationale"><strong>Correct: B.</strong> Although 3.5 mg/m³ is below the OSHA PEL of 5 mg/m³, it exceeds the action level of 50% of the PEL (2.5 mg/m³). At the action level, employers must initiate exposure monitoring, evaluate engineering and administrative controls, and begin medical surveillance where applicable. ACGIH recommends a TLV of 0.2 mg/m³ for inhalable mineral oil mist — meaning ACGIH-aligned programs would call for immediate controls. Relying solely on PEL compliance without addressing action-level exceedances represents inadequate EHS practice.</div>
+        </div>
+      </div>
+
+      <div class="more-questions-note">
+        <p><strong>7 additional questions</strong> in the full bank — covering hexavalent chromium controls, RCRA satellite accumulation, respirator APF selection, hearing conservation triggers, and lead MRP. Difficulty ranges from Beginner to Expert.</p>
+        <a href="/assets/EHS_Material_Hazards_Assessment_Sample.pdf" download class="download-btn" style="font-size:9px;padding:10px 18px;">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download All 10
+        </a>
+      </div>
+
     </div>
 
-    <div class="portfolio-grid">
+    <!-- ============================================================ -->
+    <!-- SAMPLE 2: SCAFFOLD EVALUATION -->
+    <!-- ============================================================ -->
+    <div class="sample-block">
 
-      <!-- CONSULTING -->
-      <div class="portfolio-card" data-category="consulting">
-        <span class="category-badge consulting">Consulting</span>
-        <div class="doc-type">Standard Operating Procedure</div>
-        <h3>Passivation of Stainless Steel Fabrications</h3>
-        <p>Full-length SOP for passivation of austenitic stainless steel for pharmaceutical and food production end-use. Covers pre-treatment verification, citric and nitric acid treatment methods, copper sulfate and ferroxyl verification testing, acceptance criteria, nonconformance handling, and documentation requirements. References ASTM A967 and ASTM A380.</p>
-        <div class="doc-meta">SOP-FAB-006 &bull; Pharma / Food Grade &bull; ASTM A967 / A380</div>
+      <div class="sample-header">
+        <div>
+          <div class="doc-type">Training Content Evaluation</div>
+          <h2 style="margin-bottom:10px;">Safety Training Program Evaluation<br><span style="font-weight:500;color:var(--mid);">Scaffold Erection, Use, and Dismantling</span></h2>
+          <div class="rule-accent"></div>
+          <p style="max-width:600px;">A compliance and field-accuracy review of a scaffold safety training script against 29 CFR 1926 Subpart L. Evaluated across four dimensions: regulatory accuracy, field-level realism, instructional clarity, and learner engagement. Seven findings documented, rated by severity.</p>
+          <div class="sample-meta">
+            <span class="meta-tag primary">Training Evaluation</span>
+            <span class="meta-tag">29 CFR 1926 Subpart L</span>
+            <span class="meta-tag">7 Findings</span>
+            <span class="meta-tag">STE-SCAFFOLD-012</span>
+          </div>
+        </div>
+        <a href="/assets/STE-012_Scaffold_Safety_Training_Evaluation.pdf" download class="download-btn">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download Full PDF
+        </a>
       </div>
 
-      <div class="portfolio-card" data-category="consulting">
-        <span class="category-badge consulting">Consulting</span>
-        <div class="doc-type">Operations Gap Analysis Report</div>
-        <h3>Job Shop Operations Review — Precision Components LLC</h3>
-        <p>Five-finding gap analysis for a fictitious 18-person custom fabrication job shop. Identifies operational weaknesses across documentation, scheduling, inspection records, purchasing, and training — each rated by priority with specific corrective recommendations and a phased 90-day implementation roadmap.</p>
-        <div class="doc-meta">GAP-2026-001 &bull; Custom Fabrication &bull; 5 Findings / 3 HIGH Priority</div>
+      <!-- EXEC SUMMARY + META -->
+      <div class="sample-divider">Executive Summary</div>
+
+      <div class="exec-summary">
+        <div class="exec-summary-meta">
+          <table>
+            <tr><td>Report Ref</td><td>STE-SCAFFOLD-012</td></tr>
+            <tr><td>Standard</td><td>29 CFR 1926 Subpart L — Scaffolds</td></tr>
+            <tr><td>Content</td><td>Training script — Scaffold Safety Micro-Module</td></tr>
+            <tr><td>Overall Rating</td><td class="overall-rating">Conditional Pass — Revisions Required</td></tr>
+            <tr><td>Findings</td><td>3 HIGH &nbsp;·&nbsp; 4 MODERATE &nbsp;·&nbsp; 0 CRITICAL</td></tr>
+          </table>
+        </div>
+        <div class="exec-summary-text">
+          <p>The script demonstrates a solid foundational structure and covers the primary scaffold hazards at a general level. However, several areas require revision before the content is suitable for publication.</p>
+          <p>Specifically, the script understates key load capacity requirements, omits critical competent-person obligations, and presents scaffold access procedures in a manner inconsistent with how they are implemented in the field.</p>
+          <p>No findings are rated CRITICAL — no content that would cause direct harm if followed as written. Three findings are rated HIGH and require mandatory revision before publication.</p>
+        </div>
       </div>
 
-      <div class="portfolio-card" data-category="consulting">
-        <span class="category-badge consulting">Consulting</span>
-        <div class="doc-type">Safety Training Program Evaluation</div>
-        <h3>Scaffold Safety Training — OSHA 29 CFR 1926 Subpart L</h3>
-        <p>Compliance and effectiveness review of a scaffold safety training script against 29 CFR 1926 Subpart L. Seven findings rated by severity across four dimensions: regulatory accuracy, field-level realism, instructional clarity, and learner engagement. Issued with a Conditional Pass rating and specific revision guidance.</p>
-        <div class="doc-meta">STE-012 &bull; Construction / Safety Training &bull; 7 Findings / OSHA Subpart L</div>
-      </div>
+      <!-- FINDINGS TABLE -->
+      <div class="sample-divider">Findings Summary — All 7</div>
 
-      <div class="portfolio-card" data-category="consulting">
-        <span class="category-badge consulting">Consulting</span>
-        <div class="doc-type">Welding Procedure Documentation Review</div>
-        <h3>AWS D1.1 Compliance Review — Structural Steel Fabricator</h3>
-        <p>AWS D1.1 compliance review for a 12-person structural steel fabricator. Identified 4 qualification gaps and developed a corrective documentation package including revised WPS, PQR review checklist, and welder qualification tracking matrix.</p>
-        <div class="doc-meta">WPR-2026-003 &bull; Structural Fabrication &bull; AWS D1.1 &bull; 4 Gaps Identified</div>
-      </div>
+      <table class="findings-table">
+        <thead>
+          <tr>
+            <th style="width:180px;">Item</th>
+            <th>Finding</th>
+            <th style="width:80px;">Severity</th>
+            <th>Required Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Load Capacity Language</td>
+            <td>Script states scaffolds must support "their intended load" without specifying the 4:1 safety factor required by 1926.451(a)(1). Learners will not understand the quantitative requirement.</td>
+            <td><span class="sev-badge sev-high">HIGH</span></td>
+            <td>Add explicit reference to the 4:1 safety factor. Include a practical example: if working load is 1,000 lbs, scaffold must be rated to 4,000 lbs.</td>
+          </tr>
+          <tr>
+            <td>Competent Person Obligations</td>
+            <td>Script mentions a "qualified person" must inspect scaffolds but does not define the distinction between a competent person and a qualified person as defined in 1926.450. A common and consequential compliance gap.</td>
+            <td><span class="sev-badge sev-high">HIGH</span></td>
+            <td>Add clear definitions of both terms per 29 CFR 1926.450. Clarify which functions require each designation and that these may be different individuals.</td>
+          </tr>
+          <tr>
+            <td>Scaffold Access Procedures</td>
+            <td>Script describes accessing scaffolds via the frame as standard practice. 1926.451(e) requires a proper access system for scaffolds over 2 feet. Accessing via the frame is a field habit the training should actively correct, not normalize.</td>
+            <td><span class="sev-badge sev-high">HIGH</span></td>
+            <td>Revise to explicitly state that frame climbing is prohibited where an access system is required. Include language about the 2-foot height threshold triggering the requirement.</td>
+          </tr>
+          <tr>
+            <td>Guardrail Specifications</td>
+            <td>Script references "proper guardrails" without specifying the height requirement (38–45 inches per 1926.502) or the 200 lb. top rail force requirement. Vague guardrail language is where compliance failures consistently occur in the field.</td>
+            <td><span class="sev-badge sev-moderate">MODERATE</span></td>
+            <td>Add specific height range and load requirement. Note that midrails must be positioned at approximately half the height of the top rail.</td>
+          </tr>
+          <tr>
+            <td>Footing &amp; Base Plate Requirements</td>
+            <td>Footing requirements addressed in one sentence. In practice, improper footings are one of the leading causes of scaffold collapse. 1926.451(c) covers this in detail and warrants more instructional weight.</td>
+            <td><span class="sev-badge sev-moderate">MODERATE</span></td>
+            <td>Expand footing section: base plates on all frames, mudsills on soft ground, plumb and level requirement, prohibition on unstable objects as base support.</td>
+          </tr>
+          <tr>
+            <td>Overloading Scenarios</td>
+            <td>Script does not address the common field scenario where materials are stored on scaffold platforms, creating overload conditions that accumulate gradually and are often not recognized as hazards.</td>
+            <td><span class="sev-badge sev-moderate">MODERATE</span></td>
+            <td>Add scenario-based segment covering material storage on scaffolds. Reinforce that load ratings apply to the combined weight of personnel, tools, and materials at any point in time.</td>
+          </tr>
+          <tr>
+            <td>Dismantling Sequence</td>
+            <td>Dismantling section describes the process in general terms but does not reinforce that dismantling must follow the reverse sequence of erection. Out-of-sequence dismantling is a significant collapse risk.</td>
+            <td><span class="sev-badge sev-moderate">MODERATE</span></td>
+            <td>Add explicit language that dismantling proceeds in strict reverse order of erection. Recommend including a brief visual or checklist sequence.</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <!-- TRAINING -->
-      <div class="portfolio-card" data-category="training">
-        <span class="category-badge training">Training</span>
-        <div class="doc-type">Industrial Safety Exam Sample</div>
-        <h3>15-Question Industrial Safety Assessment — Sample</h3>
-        <p>A sample assessment covering core industrial safety topics including hazard identification, PPE selection, lockout/tagout procedures, and OSHA standards application. Demonstrates question construction, difficulty calibration, distractor rationale, and answer explanation format across multiple question types. Aligned to OSHA 29 CFR General Industry standards.</p>
-        <div class="doc-meta">EXAM-SAMPLE-001 &bull; Industrial Safety &bull; OSHA 29 CFR &bull; 15 Items / Mixed Format</div>
-      </div>
-
-      <div class="portfolio-card" data-category="training">
-        <span class="category-badge training">Training</span>
-        <div class="doc-type">Curriculum Alignment Report</div>
-        <h3>AWS SENSE Curriculum Alignment Report</h3>
-        <p>Full curriculum alignment to AWS SENSE standards for a regional CTE welding program. Identified 6 coverage gaps across Entry Level and Level 1 competencies and recommended sequence revisions to improve standards compliance and learner outcomes.</p>
-        <div class="doc-meta">ALIGN-2026-001 &bull; Welding &amp; Fabrication &bull; AWS SENSE &bull; 6 Gaps Identified</div>
-      </div>
-
-      <div class="portfolio-card" data-category="training">
-        <span class="category-badge training">Training</span>
-        <div class="doc-type">eLearning Content Review</div>
-        <h3>Welding Symbols eLearning Module Review</h3>
-        <p>Technical content review of a 4-module eLearning series on welding symbols for an eLearning platform. Flagged 12 technical inaccuracies, suggested clearer diagram briefs, and provided corrected reference language aligned to AWS A2.4.</p>
-        <div class="doc-meta">CR-2026-007 &bull; Welding &bull; eLearning Platform &bull; 12 Technical Flags</div>
-      </div>
-
-      <div class="portfolio-card" data-category="training">
-        <span class="category-badge training">Training</span>
-        <div class="doc-type">Test Bank Development</div>
-        <h3>Test Bank: Industrial Maintenance — 45 Questions</h3>
-        <p>45-question test bank for an industrial maintenance program, covering mechanical systems, electrical safety, and preventive maintenance. Multi-format items (MC, matching, short-answer) with full answer rationale. Produced for a publisher's instructor resources package.</p>
-        <div class="doc-meta">TB-2026-002 &bull; Mechanical Systems &bull; Publisher &bull; 45 Items / Multi-Format</div>
+      <div class="more-questions-note" style="margin-top:20px;">
+        <p><strong>Full report includes</strong> detailed analysis across all four review dimensions — regulatory accuracy, field-level realism, instructional clarity, and learner engagement — plus overall assessment and recommendation.</p>
+        <a href="/assets/STE-012_Scaffold_Safety_Training_Evaluation.pdf" download class="download-btn" style="font-size:9px;padding:10px 18px;">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Download Full Report
+        </a>
       </div>
 
     </div>
 
-    <div style="margin-top:36px;padding:28px;background:var(--steel-pale);border-left:3px solid var(--steel);">
-      <h3 style="margin-bottom:8px;">Request Sample Documents</h3>
-      <p style="margin:0;font-size:13px;color:var(--muted);">Full PDF versions of all documents above are available on request. Reach out directly and we&rsquo;ll get them to you promptly.</p>
-      <a href="/contact.html" class="btn btn-primary" style="margin-top:18px;display:inline-block;">Request Samples</a>
-    </div>
   </div>
 </section>
 
+<!-- CALLOUT -->
 <section class="callout-strip">
   <div class="container">
-    <h2>Ready to put this to work for your operation?</h2>
-    <p>Every engagement starts with a conversation. Tell us what you're dealing with and we'll tell you straight whether we can help.</p>
-    <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
+    <h2>Want to see work specific to your subject area?</h2>
+    <p>The samples above cover EHS and construction safety. Welding, CNC, metallurgy, and industrial safety assessment samples available on request — or start a project conversation directly.</p>
+    <a href="/contact.html?inquiry=training" class="btn btn-primary">Start a Project Conversation</a>
   </div>
 </section>
 
@@ -140,8 +525,9 @@
       <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
     </div>
     <div class="footer-links">
-      <a href="/consulting/">Consulting</a>
       <a href="/training/">Training &amp; Assessment</a>
+      <a href="/talent.html">Talent Profiles</a>
+      <a href="/services.html">Consulting</a>
       <a href="/about.html">About</a>
       <a href="/portfolio.html">Portfolio</a>
       <a href="/contact.html">Contact</a>
@@ -164,23 +550,6 @@
       links.classList.remove('open');
       toggle.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
-    });
-  });
-
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const portfolioCards = document.querySelectorAll('.portfolio-card[data-category]');
-  filterBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      filterBtns.forEach(function(b) { b.classList.remove('active'); });
-      this.classList.add('active');
-      const filter = this.dataset.filter;
-      portfolioCards.forEach(function(card) {
-        if (filter === 'all' || card.dataset.category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
     });
   });
 </script>

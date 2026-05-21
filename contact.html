@@ -20,7 +20,7 @@
 
     /* INQUIRY TYPE SELECTOR */
     .inquiry-tabs {
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      display: grid; grid-template-columns: repeat(4, 1fr);
       gap: 0; border: 1px solid var(--border); margin-bottom: 48px;
     }
     .inquiry-tab {
@@ -119,12 +119,19 @@
     .info-note p { font-size: 13px; color: var(--mid); margin: 0; }
     .info-note strong { color: var(--navy); }
 
-    @media (max-width: 760px) {
-      .inquiry-tabs { grid-template-columns: 1fr; }
-      .inquiry-tab { border-right: none; border-bottom: 1px solid var(--border); }
+    @media (max-width: 860px) {
+      .inquiry-tabs { grid-template-columns: 1fr 1fr; }
+      .inquiry-tab:nth-child(2n) { border-right: none; }
+      .inquiry-tab { border-bottom: 1px solid var(--border); }
       .inquiry-tab:last-child { border-bottom: none; }
+    }
+    @media (max-width: 760px) {
       .contact-grid { grid-template-columns: 1fr; gap: 40px; }
       .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .inquiry-tabs { grid-template-columns: 1fr; }
+      .inquiry-tab { border-right: none; }
     }
   </style>
 </head>
@@ -165,7 +172,12 @@
     <!-- INQUIRY TYPE TABS -->
     <div class="section-label">What brings you here?</div>
     <div class="inquiry-tabs" role="tablist">
-      <div class="inquiry-tab active" role="tab" onclick="showPanel('job-spec', this)">
+      <div class="inquiry-tab active" role="tab" onclick="showPanel('training', this)">
+        <span class="tab-label">For Publishers &amp; Programs</span>
+        <div class="tab-title">Training &amp; Assessment Project</div>
+        <div class="tab-sub">I need SME or curriculum work</div>
+      </div>
+      <div class="inquiry-tab" role="tab" onclick="showPanel('job-spec', this)">
         <span class="tab-label">For Manufacturers</span>
         <div class="tab-title">Submit a Job Spec</div>
         <div class="tab-sub">I need validated candidates</div>
@@ -176,14 +188,114 @@
         <div class="tab-sub">I'm looking for opportunities</div>
       </div>
       <div class="inquiry-tab" role="tab" onclick="showPanel('general', this)">
-        <span class="tab-label">Training / Consulting / Other</span>
+        <span class="tab-label">Consulting / Other</span>
         <div class="tab-title">General Inquiry</div>
-        <div class="tab-sub">I have a different question</div>
+        <div class="tab-sub">Something else entirely</div>
       </div>
     </div>
 
-    <!-- PANEL 1: JOB SPEC -->
-    <div class="inquiry-panel active" id="panel-job-spec">
+    <!-- PANEL 1: TRAINING / SME -->
+    <div class="inquiry-panel active" id="panel-training">
+      <div class="contact-grid">
+        <div>
+          <div class="section-label">Publisher, Platform &amp; Program Inquiry</div>
+          <h2 style="margin-bottom:8px;">Start a Training Project Conversation</h2>
+          <div class="rule-accent"></div>
+          <p>Whether you need a single chapter reviewed, a full test bank developed, or ongoing SME support for an industrial training program — start here. The more context you can give about the project, the faster we can confirm fit and get to work.</p>
+          <p style="font-size:13px;color:var(--muted);">Typical response within one business day. Most projects begin with a short scoping call to define deliverables and timeline before any commitment on either side.</p>
+
+          <form class="spec-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="hidden" name="inquiry_type" value="training-project">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="t-org">Organization / Company</label>
+                <input type="text" id="t-org" name="organization" required placeholder="Publisher, platform, institution">
+              </div>
+              <div class="form-group">
+                <label for="t-name">Your Name</label>
+                <input type="text" id="t-name" name="name" required placeholder="Full name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="t-email">Email</label>
+                <input type="email" id="t-email" name="email" required placeholder="you@organization.com">
+              </div>
+              <div class="form-group">
+                <label for="t-role">Your Role</label>
+                <input type="text" id="t-role" name="role" placeholder="e.g. Curriculum Manager, Editor, ID Lead">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="t-service">Type of Work Needed</label>
+              <select id="t-service" name="service_type" required>
+                <option value="" disabled selected>Select the primary need</option>
+                <option>Item Writing / Question Bank Development</option>
+                <option>Exam Review &amp; Rebalancing</option>
+                <option>Curriculum Alignment (AWS SENSE / NCCER / OSHA)</option>
+                <option>Technical Content Review</option>
+                <option>Illustration &amp; Explanation Development</option>
+                <option>Full Test Bank Development</option>
+                <option>Ongoing SME Support / Retainer</option>
+                <option>Other — describe below</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="t-subject">Subject Area / Domain</label>
+              <input type="text" id="t-subject" name="subject" placeholder="e.g. Welding &amp; Fabrication, CNC, Industrial Safety, Metallurgy">
+            </div>
+            <div class="form-group">
+              <label for="t-detail">Project Details</label>
+              <textarea id="t-detail" name="details" placeholder="Scope, timeline, volume (e.g. number of items), standards to align to, any existing materials. The more context the better."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Project Inquiry</button>
+          </form>
+        </div>
+
+        <div>
+          <div class="section-label">What to Expect</div>
+          <h2 style="margin-bottom:8px;">How Projects Start</h2>
+          <div class="rule-accent"></div>
+          <div class="step-item">
+            <div class="step-n">01</div>
+            <div>
+              <h3>Response within one business day</h3>
+              <p>You'll hear from Griffin directly — not a project manager or intake coordinator. If there are clarifying questions about scope or fit, they get asked upfront.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-n">02</div>
+            <div>
+              <h3>Brief scoping conversation</h3>
+              <p>Most projects benefit from a 20–30 minute call to confirm the deliverables, format requirements, timeline, and any style guides or templates you use. No commitment required at this stage.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-n">03</div>
+            <div>
+              <h3>Proposal or direct agreement</h3>
+              <p>Depending on scope, either a short written proposal or a direct agreement — clear deliverables, timeline, and rate. No vague retainers or undefined scope.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-n">04</div>
+            <div>
+              <h3>Delivery</h3>
+              <p>Work delivered on schedule, formatted to your specifications. Technical accuracy backed by real floor experience — not just standard familiarity.</p>
+            </div>
+          </div>
+
+          <div class="info-note">
+            <p><strong>Prefer to reach out directly?</strong> That works too.<br>
+            <a href="mailto:griffin@setpointadvisors.com" style="color:var(--navy);font-weight:600;">griffin@setpointadvisors.com</a> &nbsp;&middot;&nbsp;
+            <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL 2: JOB SPEC -->
+    <div class="inquiry-panel" id="panel-job-spec">
       <div class="contact-grid">
         <div>
           <div class="section-label">Manufacturer Inquiry</div>
@@ -419,14 +531,10 @@
               <div class="contact-label">LinkedIn</div>
               <div class="contact-value"><a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener">linkedin.com/in/griffinmcguire</a></div>
             </div>
-            <div class="contact-item">
-              <div class="contact-label">Upwork</div>
-              <div class="contact-value"><a href="https://www.upwork.com" target="_blank" rel="noopener">Available for Contract Engagements</a></div>
-            </div>
           </div>
 
           <div class="info-note" style="margin-top:28px;">
-            <p><strong>AWS Niagara Frontier Section:</strong> For questions about getting involved with the American Welding Society or corporate sponsorship opportunities, contact Griffin directly.</p>
+            <p><strong>AWS Niagara Frontier Section:</strong> For questions about getting involved with the American Welding Society or sponsorship opportunities, contact Griffin directly as 2nd Vice Chair of the AWS Niagara Frontier Section.</p>
           </div>
         </div>
 
@@ -511,10 +619,13 @@
   // Check for URL param to pre-select a tab
   const params = new URLSearchParams(window.location.search);
   const inquiry = params.get('inquiry');
-  if (inquiry === 'candidate') {
-    document.querySelectorAll('.inquiry-tab')[1].click();
-  } else if (inquiry === 'talent') {
+  const pkg     = params.get('pkg');
+  if (inquiry === 'training' || inquiry === 'sme' || inquiry === 'curriculum') {
     document.querySelectorAll('.inquiry-tab')[0].click();
+  } else if (inquiry === 'talent' || pkg) {
+    document.querySelectorAll('.inquiry-tab')[1].click();
+  } else if (inquiry === 'candidate') {
+    document.querySelectorAll('.inquiry-tab')[2].click();
   }
 </script>
 </body>
