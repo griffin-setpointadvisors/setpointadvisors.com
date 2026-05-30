@@ -1,122 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Setpoint Advisors — Technical training content, validated talent profiles for skilled trades, and operations consulting. Built on 10+ years of real floor experience.">
-  <meta name="keywords" content="skilled trades recruiting, welding assessment, manufacturing talent profiles, training curriculum development, CTE assessment, AWS, CAWI, Buffalo NY, upstate New York">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Griffin McGuire, CAWI — Fabrication Consultant and exotic materials specialist. Semiconductor fabrication, GaN/SiC/InP, duplex stainless, AL-6XN, cleanroom-compliant welding, data center subassemblies. Setpoint Advisors, Western New York.">
+  <meta name="keywords" content="fabrication consultant, exotic materials specialist, semiconductor fabrication, GaN SiC InP, duplex stainless, AL-6XN, orbital welding, cleanroom welding, data center fabrication, CAWI, Griffin McGuire, Setpoint Advisors">
   <meta name="author" content="Griffin McGuire, Setpoint Advisors">
-  <title>Setpoint Advisors | Skilled Trades Talent &amp; Training</title>
+  <title>Griffin McGuire, CAWI — Fabrication Consultant | Setpoint Advisors</title>
   <link rel="stylesheet" href="/style.css">
   <style>
-    /* THREE-LANE SERVE SECTION */
-    .serve-three {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      margin-top: 44px;
-      border: 1px solid var(--border);
-    }
-    .serve-three .serve-panel {
-      padding: 36px 28px;
-      border-right: 1px solid var(--border);
-    }
-    .serve-three .serve-panel:last-child { border-right: none; }
-    .serve-panel.panel-talent {
-      background: var(--steel);
-      color: var(--white);
-    }
-    .serve-panel.panel-talent h3 { color: var(--white); }
-    .serve-panel.panel-talent p { color: rgba(255,255,255,0.8); }
-    .serve-panel.panel-talent ul li { color: rgba(255,255,255,0.8); }
-    .serve-panel.panel-talent .serve-tag {
-      color: rgba(255,255,255,0.9);
-      border-color: rgba(255,255,255,0.3);
-    }
-    .serve-panel.panel-talent .btn-outline-white {
-      display: inline-block;
-      padding: 11px 24px;
-      font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; border-radius: 2px;
-      border: 2px solid rgba(255,255,255,0.5);
-      color: var(--white);
-      transition: all 0.18s;
-      margin-top: 4px;
-    }
-    .serve-panel.panel-talent .btn-outline-white:hover {
-      border-color: var(--white);
-      background: rgba(255,255,255,0.12);
-    }
-    .serve-panel.panel-consulting-sm {
-      background: var(--off-white);
-    }
-    .serve-panel.panel-consulting-sm .serve-tag {
-      color: var(--muted);
-      border-color: var(--border);
-    }
-    .serve-panel.panel-consulting-sm p { font-size: 13px; color: var(--muted); }
-    .serve-panel.panel-consulting-sm .btn-text {
-      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--steel);
-      text-decoration: none; border-bottom: 1px solid var(--steel);
-      padding-bottom: 2px;
-      transition: color 0.18s;
-      display: inline-block;
-      margin-top: 8px;
-    }
-    .serve-panel.panel-consulting-sm .btn-text:hover { color: var(--navy); border-color: var(--navy); }
 
-    /* TALENT HIGHLIGHT STRIP */
-    .talent-strip {
-      background: var(--steel-pale);
-      border-top: 3px solid var(--steel);
-      border-bottom: 3px solid var(--steel);
-      padding: 48px 0;
-    }
-    .talent-strip-inner {
+    /* ── HERO ── */
+    .hero-split {
       display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 48px;
-      align-items: center;
+      grid-template-columns: 5px 1fr;
+      min-height: 420px;
     }
-    .talent-strip h2 { color: var(--navy); margin-bottom: 12px; }
-    .talent-strip p { color: var(--mid); max-width: 520px; margin-bottom: 0; }
-    .talent-strip .price-badges {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      min-width: 200px;
+    .hero-bar {
+      background: linear-gradient(180deg,
+        #0a0e14 0%,
+        #1a2535 20%,
+        #2a3a52 45%,
+        #3a5a78 65%,
+        #1a2535 85%,
+        #0a0e14 100%
+      );
     }
-    .price-badge {
+    .hero-content {
+      background: var(--navy);
+      padding: 80px 64px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--steel) 0%, var(--steel-light) 50%, var(--steel) 100%);
+    }
+    /* subtle brushed texture overlay */
+    .hero-content::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        92deg,
+        transparent 0px,
+        transparent 3px,
+        rgba(74,127,165,0.025) 3px,
+        rgba(74,127,165,0.025) 4px
+      );
+      pointer-events: none;
+    }
+    .hero-name {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hero-cawi {
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      font-weight: 300;
+      color: var(--steel-light);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .hero-title {
+      font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+      font-weight: 600;
+      color: #8fa8be;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .hero-rule {
+      width: 48px; height: 2px;
+      background: var(--steel);
+      margin-bottom: 28px;
+    }
+    .hero-body {
+      font-size: 14px;
+      color: #8fa8be;
+      max-width: 560px;
+      line-height: 1.9;
+      margin-bottom: 0;
+    }
+    .hero-body strong { color: #c8dce8; font-weight: 500; }
+
+    /* ── SPECIALISMS ── */
+    .spec-section { padding: 64px 0; }
+    .spec-lead {
+      font-size: 14px; color: var(--mid);
+      max-width: 620px; line-height: 1.85;
+      margin-bottom: 40px;
+    }
+    .spec-list {
+      list-style: none; padding: 0; margin: 0;
+      border-top: 1px solid var(--border);
+    }
+    .spec-list li {
+      display: flex; align-items: baseline; gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px; color: var(--mid);
+      line-height: 1.6;
+    }
+    .spec-list li::before {
+      content: '—';
+      color: var(--steel);
+      font-weight: 700;
+      flex-shrink: 0;
+      font-size: 13px;
+    }
+    .spec-list strong {
+      color: var(--navy);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 13px;
+    }
+
+    /* ── BACKGROUND PROSE ── */
+    .bg-section {
+      background: var(--off-white);
+      padding: 64px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .bg-prose {
+      max-width: 680px;
+    }
+    .bg-prose p {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.95;
+      margin-bottom: 20px;
+    }
+    .bg-prose p:last-child { margin-bottom: 0; }
+
+    /* ── CONTACT ── */
+    .contact-band {
+      background: var(--navy);
+      padding: 56px 0;
+    }
+    .contact-band-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 16px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--steel);
+      gap: 32px;
+      flex-wrap: wrap;
     }
-    .price-badge .pkg-name {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
-      text-transform: uppercase; color: var(--navy);
+    .contact-band h2 {
+      color: var(--white);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      margin-bottom: 8px;
     }
-    .price-badge .pkg-price {
-      font-size: 13px; font-weight: 700; color: var(--steel);
+    .contact-band p {
+      color: #8fa8be;
+      font-size: 13px;
+      margin: 0;
     }
-    .price-badge.featured { border-left-color: var(--orange); background: var(--navy); }
-    .price-badge.featured .pkg-name { color: #b0c4d8; }
-    .price-badge.featured .pkg-price { color: var(--orange); }
+    .contact-band-links {
+      display: flex; flex-direction: column; gap: 10px;
+      flex-shrink: 0;
+    }
+    .contact-link-item {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .contact-link-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--steel);
+      min-width: 60px;
+    }
+    .contact-link-val {
+      font-size: 13px; color: #c8dce8;
+      text-decoration: none;
+    }
+    .contact-link-val:hover { color: var(--white); }
 
-    /* PILLAR ICON OVERRIDE */
-    .pillar-icon { font-size: 22px; margin-bottom: 16px; }
+    /* ── ACADEMIC REDIRECT ── */
+    .academic-line {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px;
+      flex-wrap: wrap;
+    }
+    .academic-line p {
+      font-size: 12px; color: var(--muted);
+      margin: 0; max-width: 560px; line-height: 1.6;
+    }
+    .academic-line a {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--steel);
+      text-decoration: none; border-bottom: 1px solid var(--steel);
+      padding-bottom: 2px; white-space: nowrap; flex-shrink: 0;
+    }
+    .academic-line a:hover { color: var(--navy); border-color: var(--navy); }
 
-    @media (max-width: 760px) {
-      .serve-three { grid-template-columns: 1fr; }
-      .serve-three .serve-panel { border-right: none; border-bottom: 1px solid var(--border); }
-      .serve-three .serve-panel:last-child { border-bottom: none; }
-      .talent-strip-inner { grid-template-columns: 1fr; gap: 28px; }
-      .talent-strip .price-badges { flex-direction: row; flex-wrap: wrap; min-width: unset; }
-      .price-badge { flex: 1; min-width: 140px; }
+    @media (max-width: 680px) {
+      .hero-content { padding: 56px 32px 56px; }
+      .contact-band-inner { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -132,217 +216,119 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="/index.html" class="active">Home</a></li>
-      <li><a href="/training/">Training &amp; Assessment</a></li>
-      <li><a href="/talent.html">Talent Profiles</a></li>
+      <li><a href="/index.html" class="active">Consulting</a></li>
+      <li><a href="/workforce/">Workforce</a></li>
+      <li><a href="/academic/">Academic</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/portfolio.html">Portfolio</a></li>
-      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-label">Setpoint Advisors</div>
-    <h1>Technical training.<br><span>Validated talent.</span><br>Real floor experience.</h1>
-    <p class="hero-body">We build assessment and curriculum content for training organizations and technical programs — and we connect manufacturers with shop-floor-ready tradespeople through our validated talent profile service. Everything backed by 10+ years of fabrication, a CAWI credential, and active presence in the trades community.</p>
-    <div class="hero-ctas">
-      <a href="/training/" class="btn btn-primary">Training &amp; Assessment Content</a>
-      <a href="/talent.html" class="btn btn-outline">Validated Talent Profiles</a>
-    </div>
-    <p style="margin-top:20px; margin-bottom:0; font-size:12px; color:rgba(144,168,190,0.7);">
-      Looking for operations consulting? <a href="/consulting/" style="color:var(--steel-light); border-bottom: 1px solid rgba(74,127,165,0.4);">We do that too.</a>
+<div class="hero-split">
+  <div class="hero-bar"></div>
+  <div class="hero-content">
+    <div class="hero-name">Griffin McGuire</div>
+    <div class="hero-cawi">CAWI</div>
+    <div class="hero-title">Fabrication Consultant &nbsp;·&nbsp; Exotic Materials Specialist</div>
+    <div class="hero-rule"></div>
+    <p class="hero-body">
+      Shop floor experience with <strong>advanced and specialty materials</strong> — carried from production welding and regulated fabrication into semiconductor, precision manufacturing, and high-performance systems. When the material falls outside the standard frame of reference, that background is the difference.
     </p>
   </div>
+</div>
+
+<!-- SPECIALISMS -->
+<section class="spec-section">
+  <div class="container">
+
+    <div class="section-label">Precision Fabrication for Advanced Materials</div>
+    <p class="spec-lead">The back of this card lists what the work actually covers. Below is the fuller picture — where the hands-on background in each area comes from, and what that means for a consulting engagement.</p>
+
+    <ul class="spec-list">
+      <li>
+        <div>
+          <strong>GaN, SiC, InP &amp; Refractory Alloys</strong>
+          Compound semiconductors and refractory materials require fabrication and handling protocols most shops have never encountered. Technical knowledge of chip fab environments, material behavior at process temperatures, and the contamination sensitivities that make standard shop practice insufficient.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Semiconductor Fabrication &amp; Packaging</strong>
+          Familiarity with semiconductor manufacturing environments — cleanroom discipline, process equipment, packaging subassemblies, and the systems that support wafer-level and die-level production. Grounded in microcontroller and electronics work that bridges fab and assembly.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Cleanroom-Compliant Welding &amp; Passivation</strong>
+          Orbital GTAW on high-purity stainless, passivation to ASTM A967 and A380, and the documentation those environments require. First-hand production experience in pharmaceutical and food-grade regulated environments — where process control and traceability are not optional.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Custom Subassemblies for Data Centers &amp; High Performance Computing</strong>
+          Hands-on fabrication of data center infrastructure components — cooling systems, structural subassemblies, and precision-built assemblies for high-density compute environments. Includes work across duplex stainless, AL-6XN, aluminum, and glass-filled engineering polymers.
+        </div>
+      </li>
+      <li>
+        <div>
+          <strong>Specialty Alloys &amp; High-Performance Materials</strong>
+          Duplex stainless (2205), AL-6XN, high-purity 316L, and super austenitic grades. Material selection, welding procedure development, filler selection, and corrosion performance in aggressive or regulated service environments. Supported by CAWI certification and active pursuit of full CWI.
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
 
-<!-- WHAT MAKES THE WORK DIFFERENT -->
-<section>
+<!-- BACKGROUND PROSE -->
+<section class="bg-section">
   <div class="container">
-    <div class="section-label">Why Setpoint Advisors</div>
-    <h2>What Makes the Work Different</h2>
-    <div class="rule-accent"></div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pillar-icon">🔧</div>
-        <h3>Field-Level, Not Theoretical</h3>
-        <p>We've run operations, managed production, and worked on the floor. Every assessment, curriculum, and candidate evaluation is grounded in real manufacturing experience — not academic theory.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">✓</div>
-        <h3>Validated by a Practitioner</h3>
-        <p>As a CAWI with 10+ years on the shop floor and active involvement in AWS, every candidate profile and training deliverable is personally reviewed against real production standards — not just multiple-choice answers.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">⚡</div>
-        <h3>Built to Be Used</h3>
-        <p>Assessments that actually test what matters. Candidate profiles written for hiring managers, not HR departments. Curriculum that works in the classroom and on the floor. Deliverables that don't go on a shelf.</p>
-      </div>
+    <div class="section-label">Background</div>
+    <div class="bg-prose">
+      <p>The consulting work is grounded in over a decade of hands-on production experience before it was consulting at all. That includes production welding on aluminum and steel subassemblies, GTAW fabrication for pharmaceutical and food-grade stainless systems under passivation requirements, and ownership of a custom metal fabrication business — managing production, quality, materials, and client relationships end to end.</p>
+      <p>That foundation expanded into adjacent territory over time: CNC machine builds and precision subassemblies, electronics and microcontroller work, data center infrastructure fabrication, additive and cast component integration, and the engineering polymer work that shows up when a design calls for glass-filled nylon or a structural polymer in a precision assembly. None of it happened in isolation – each area built on what came before it.</p>
+      <p>The result is a consultant who can walk a production floor, read the weld procedure, understand the material datasheet, and also understand the system that part goes into. That range is what makes the exotic materials work different from what a specialist in any single discipline can offer.</p>
     </div>
   </div>
 </section>
 
-<!-- WHO WE SERVE — THREE LANES -->
-<section class="alt">
+<!-- CONTACT BAND -->
+<div class="contact-band" id="contact">
   <div class="container">
-    <div class="section-label">Who We Serve</div>
-    <h2>Three Services. One Foundation of Experience.</h2>
-    <div class="rule-accent"></div>
-    <div class="serve-three">
-
-      <!-- LANE 1: TRAINING -->
-      <div class="serve-panel panel-consulting">
-        <span class="serve-tag">For Training Organizations &amp; Publishers</span>
-        <h3>Assessment &amp; Curriculum Development</h3>
-        <ul>
-          <li>Technical assessments written by practitioners, not theorists</li>
-          <li>Item writing, review, and alignment to AWS, NCCER, OSHA standards</li>
-          <li>Welding, CNC, fabrication, and industrial safety programs</li>
-          <li>eLearning SME and subject matter expertise for national publishers</li>
-          <li>CTE program curriculum built for real shop environments</li>
-        </ul>
-        <a href="/training/" class="btn btn-primary">Explore Training Services</a>
-      </div>
-
-      <!-- LANE 2: TALENT PROFILES -->
-      <div class="serve-panel panel-talent">
-        <span class="serve-tag">For Manufacturers &amp; Job Shops</span>
-        <h3>Validated Talent Profiles</h3>
-        <ul>
-          <li>Stop gambling on unproven candidates from job boards</li>
-          <li>Receive fully assessed, shop-floor-validated profiles</li>
-          <li>You make all hiring decisions — we remove the risk</li>
-          <li>Profiles include competency scores, readiness ratings, and practical notes</li>
-          <li>Candidates never pay — we source, assess, and deliver</li>
-        </ul>
-        <a href="/talent.html" class="btn-outline-white">See Packages &amp; Pricing</a>
-      </div>
-
-      <!-- LANE 3: CONSULTING -->
-      <div class="serve-panel panel-consulting-sm">
-        <span class="serve-tag">Operations Consulting</span>
-        <h3>When You Need More Than a Profile</h3>
-        <p>For manufacturers facing compliance gaps, audit preparation, SOP documentation, or operational improvements — we offer targeted consulting engagements built on real floor experience. Available for the right projects.</p>
-        <p style="margin-bottom:16px;">Specialized in pharma/food-grade fabrication, welding procedure compliance, and gap analysis for small to mid-size job shops.</p>
-        <a href="/consulting/" class="btn-text">Learn More →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TALENT PROFILE HIGHLIGHT -->
-<section class="talent-strip">
-  <div class="container">
-    <div class="talent-strip-inner">
+    <div class="contact-band-inner">
       <div>
-        <div class="section-label">Validated Talent Profiles</div>
-        <h2>Hire with Confidence.<br>Stop Gambling on Unproven Talent.</h2>
-        <p style="margin-top:14px;">The average cost of a bad hire in skilled manufacturing is $15,000–$25,000 when you factor in lost productivity, retraining, and starting over. Our validated profiles give you a shop-floor-ready assessment of every candidate before you spend a single hour interviewing. You review the profile, make the call, handle the paperwork. We remove the risk.</p>
-        <a href="/talent.html" class="btn btn-primary" style="margin-top:24px; display:inline-block;">View Packages &amp; How It Works</a>
+        <h2>Start a conversation.</h2>
+        <p>Describe the material, the environment, or the problem.<br>Griffin responds personally — typically within one business day.</p>
       </div>
-      <div class="price-badges">
-        <div class="price-badge">
-          <span class="pkg-name">Single Profile</span>
-          <span class="pkg-price">$1,200</span>
+      <div class="contact-band-links">
+        <div class="contact-link-item">
+          <span class="contact-link-label">Email</span>
+          <a href="mailto:griffin@setpointadvisors.com" class="contact-link-val">griffin@setpointadvisors.com</a>
         </div>
-        <div class="price-badge featured">
-          <span class="pkg-name">3-Pack</span>
-          <span class="pkg-price">$2,950</span>
+        <div class="contact-link-item">
+          <span class="contact-link-label">Phone</span>
+          <a href="tel:5858139232" class="contact-link-val">585-813-9232</a>
         </div>
-        <div class="price-badge">
-          <span class="pkg-name">5-Pack</span>
-          <span class="pkg-price">$4,500</span>
-        </div>
-        <div class="price-badge">
-          <span class="pkg-name">Expedited</span>
-          <span class="pkg-price">$1,600</span>
+        <div class="contact-link-item">
+          <span class="contact-link-label">LinkedIn</span>
+          <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener" class="contact-link-val">linkedin.com/in/griffinmcguire</a>
         </div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- CREDENTIALS & COMMUNITY -->
-<section class="cred-strip">
+<!-- ACADEMIC REDIRECT -->
+<div style="background:var(--white);">
   <div class="container">
-    <div class="section-label">Credentials &amp; Community</div>
-    <div class="cred-grid">
-      <div>
-        <div class="cred-label">Certification</div>
-        <div class="cred-value">CAWI</div>
-        <div class="cred-sub">Certified Associate Welding Inspector</div>
-      </div>
-      <div>
-        <div class="cred-label">Background</div>
-        <div class="cred-value">10+ Years</div>
-        <div class="cred-sub">Fabrication &amp; Industrial Operations</div>
-      </div>
-      <div>
-        <div class="cred-label">Assessment Work</div>
-        <div class="cred-value">SME &amp; Item Writer</div>
-        <div class="cred-sub">eLearning, Publishers, CTE Programs</div>
-      </div>
-      <div>
-        <div class="cred-label">Community</div>
-        <div class="cred-value">AWS District 6</div>
-        <div class="cred-sub">Niagara Frontier — Membership Chair</div>
-      </div>
-      <div>
-        <div class="cred-label">Event</div>
-        <div class="cred-value">Weld-Off Judge</div>
-        <div class="cred-sub">2nd Consecutive Year, 2026</div>
-      </div>
+    <div class="academic-line">
+      <p>Looking for assessment development, curriculum work, CTE program support, or speaking engagements? Those services live under a separate practice area.</p>
+      <a href="/academic/">Academic &amp; Training Services →</a>
     </div>
   </div>
-</section>
-
-<!-- PORTFOLIO PREVIEW -->
-<section>
-  <div class="container">
-    <div class="section-label">Recent Work</div>
-    <h2>Sample Deliverables</h2>
-    <div class="rule-accent"></div>
-    <p style="max-width:600px;">A cross-section of training and consulting work — built on the same foundation of real industrial experience that informs every candidate assessment we deliver.</p>
-    <div class="portfolio-preview">
-      <div class="portfolio-card">
-        <span class="category-badge consulting">Consulting</span>
-        <div class="doc-type">Standard Operating Procedure</div>
-        <h3>Passivation of Stainless Steel Fabrications</h3>
-        <p>Full SOP for pharma-grade passivation. References ASTM A967 and ASTM A380. Covers treatment methods, verification testing, and nonconformance handling.</p>
-        <div class="doc-meta">SOP-FAB-006 &bull; Pharma / Food Grade</div>
-      </div>
-      <div class="portfolio-card">
-        <span class="category-badge consulting">Consulting</span>
-        <div class="doc-type">Operations Gap Analysis</div>
-        <h3>Job Shop Operations Review — Precision Components LLC</h3>
-        <p>Five-finding gap analysis for an 18-person custom fabrication shop. Prioritized findings with 90-day corrective roadmap.</p>
-        <div class="doc-meta">GAP-2026-001 &bull; 5 Findings / 3 HIGH Priority</div>
-      </div>
-      <div class="portfolio-card">
-        <span class="category-badge training">Training</span>
-        <div class="doc-type">Industrial Safety Assessment</div>
-        <h3>15-Question Industrial Safety Assessment</h3>
-        <p>Sample assessment covering hazard ID, PPE, LOTO, and OSHA standards. Demonstrates question construction, difficulty calibration, and distractor rationale.</p>
-        <div class="doc-meta">EXAM-SAMPLE-001 &bull; OSHA 29 CFR &bull; 15 Items</div>
-      </div>
-    </div>
-    <div style="margin-top:32px;">
-      <a href="/portfolio.html" class="btn btn-primary">View Full Portfolio</a>
-    </div>
-  </div>
-</section>
-
-<!-- CALLOUT -->
-<section class="callout-strip">
-  <div class="container">
-    <h2>Ready to work with someone who has been there?</h2>
-    <p>Training content for publishers and programs. Validated talent profiles for manufacturers. Consulting for the right engagement. All built on real industrial experience.</p>
-    <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
-  </div>
-</section>
+</div>
 
 <footer>
   <div class="footer-inner">
@@ -352,12 +338,12 @@
       <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
     </div>
     <div class="footer-links">
-      <a href="/training/">Training &amp; Assessment</a>
-      <a href="/talent.html">Talent Profiles</a>
-      <a href="/consulting/">Consulting</a>
+      <a href="/index.html">Consulting</a>
+      <a href="/workforce/">Workforce</a>
+      <a href="/academic/">Academic</a>
       <a href="/about.html">About</a>
       <a href="/portfolio.html">Portfolio</a>
-      <a href="/contact.html">Contact</a>
+      <a href="#contact">Contact</a>
       <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
