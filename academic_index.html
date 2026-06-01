@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Setpoint Advisors Academic & Training Services — assessment development, curriculum design, research assistance, and speaking engagements for schools, CTE programs, publishers, and certification bodies. Practitioner SME with CAWI certification and 10+ years fabrication experience.">
+  <meta name="keywords" content="assessment development, curriculum design, CTE program audit, welding curriculum, industrial SME, NCCER alignment, AWS SENSE, research assistance, speaking engagement, trades education, Griffin McGuire">
+  <meta name="author" content="Griffin McGuire, Setpoint Advisors">
+  <title>Academic &amp; Training Services | Setpoint Advisors</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .page-header {
+      background: var(--navy); padding: 64px 0 56px; position: relative; overflow: hidden;
+    }
+    .page-header::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--steel) 0%, var(--steel-light) 50%, var(--steel) 100%);
+    }
+    .page-header h1 { color: var(--white); margin-bottom: 16px; }
+    .page-header p { color: #8fa8be; max-width: 580px; margin-bottom: 0; }
+
+    /* SERVICE SECTIONS */
+    .service-section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-section:last-of-type { border-bottom: none; }
+    .service-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .service-label-col {
+      padding-top: 4px;
+      position: sticky;
+      top: 24px;
+    }
+    .service-category {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--steel);
+      display: block; margin-bottom: 10px;
+    }
+    .service-label-col h2 {
+      font-size: 1.15rem;
+      color: var(--navy);
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+    .service-label-col .rule-accent { margin-bottom: 0; }
+
+    .service-body p {
+      font-size: 14px; color: var(--mid);
+      line-height: 1.9; margin-bottom: 16px;
+    }
+    .service-body p:last-child { margin-bottom: 0; }
+
+    /* TOPIC LIST */
+    .topic-list {
+      list-style: none; padding: 0; margin: 24px 0 0;
+      border-top: 1px solid var(--border);
+    }
+    .topic-list li {
+      display: flex; align-items: baseline; gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px; color: var(--mid);
+      line-height: 1.5;
+    }
+    .topic-list li::before {
+      content: '—'; color: var(--steel);
+      font-weight: 700; flex-shrink: 0; font-size: 12px;
+    }
+
+    /* STANDARDS ROW */
+    .standards-inline {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 20px;
+    }
+    .std-pill {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; padding: 5px 12px;
+      border: 1px solid var(--border); color: var(--muted);
+      background: var(--off-white);
+    }
+
+    /* SPEAKING NOTE */
+    .speaking-note {
+      background: var(--steel-pale);
+      border-left: 4px solid var(--steel);
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .speaking-note p {
+      font-size: 13px; color: var(--mid);
+      margin: 0; line-height: 1.7;
+    }
+    .speaking-note strong { color: var(--navy); }
+
+    /* WHO THIS IS FOR */
+    .audience-list {
+      list-style: none; padding: 0; margin: 0;
+      border-top: 1px solid var(--border);
+    }
+    .audience-list li {
+      display: flex; align-items: baseline; gap: 14px;
+      padding: 14px 0; border-bottom: 1px solid var(--border);
+      font-size: 13px; color: var(--mid); line-height: 1.6;
+    }
+    .audience-list li::before {
+      content: '—'; color: var(--steel);
+      font-weight: 700; flex-shrink: 0; font-size: 12px;
+    }
+    .audience-list strong {
+      color: var(--navy); font-weight: 600;
+      display: inline; margin-right: 6px;
+    }
+
+    @media (max-width: 760px) {
+      .service-grid { grid-template-columns: 1fr; gap: 24px; }
+      .service-label-col { position: static; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="/index.html">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:48px;width:auto;display:block;">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Consulting</a></li>
+      <li><a href="/workforce/">Workforce</a></li>
+      <li><a href="/academic/" class="active">Academic</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="container">
+    <div class="section-label" style="color:var(--steel-light);">Academic &amp; Training Services</div>
+    <h1>Practitioner Knowledge.<br>Applied to Education.</h1>
+    <p>Assessment development, curriculum design, research assistance, and speaking engagements — for programs, publishers, and institutions that need someone who has done the work, not just studied it.</p>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section style="padding: 48px 0; border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Who This Is For</div>
+    <ul class="audience-list" style="margin-top:20px;">
+      <li><div><strong>CTE Programs &amp; Community Colleges</strong> Curriculum review, assessment alignment, program audits, and advisory support for welding, fabrication, machining, and industrial safety tracks.</div></li>
+      <li><div><strong>Publishers &amp; eLearning Platforms</strong> Technical SME for item writing, test bank development, chapter review, and content accuracy — across trades, manufacturing, and industrial safety domains.</div></li>
+      <li><div><strong>Certification Bodies &amp; Testing Organizations</strong> Item writing, exam rebalancing, and expert panel participation for industrial and trades credentials.</div></li>
+      <li><div><strong>Instructional Design Firms</strong> SME subcontract support for industrial training development projects. Clean deliverables, technical accuracy, on deadline.</div></li>
+      <li><div><strong>Researchers &amp; Grant-Funded Programs</strong> Technical consultation for student researchers, faculty projects, and institutionally funded work where fabrication, materials, or industrial safety expertise is needed.</div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ASSESSMENT DEVELOPMENT -->
+<section class="service-section">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-label-col">
+        <span class="service-category">Assessment Development</span>
+        <h2>Assessment &amp; Item Writing</h2>
+        <div class="rule-accent"></div>
+      </div>
+      <div class="service-body">
+        <p>Assessment questions written by someone who has done the work test the right things. Stems are grounded in real operational scenarios, distractors reflect actual misconceptions rather than arbitrary wrong answers, and rationale is written to teach — not just to confirm the correct response.</p>
+        <p>Work spans original item writing, full test bank development, exam review and difficulty rebalancing, and technical accuracy checks on existing content. Multiple-choice, short-answer, matching, and performance-based formats. Delivered formatted to your specifications, ready for instructor or platform use.</p>
+        <ul class="topic-list">
+          <li>Original item writing — questions, distractors, and detailed answer rationale</li>
+          <li>Exam review and difficulty calibration</li>
+          <li>Full test bank development, end to end</li>
+          <li>Technical accuracy review of existing assessments</li>
+          <li>Illustration and explanation development for technical concepts</li>
+          <li>Performance-based and scenario-grounded item formats</li>
+        </ul>
+        <div class="standards-inline">
+          <span class="std-pill">AWS SENSE</span>
+          <span class="std-pill">NCCER</span>
+          <span class="std-pill">OSHA 29 CFR</span>
+          <span class="std-pill">AWS D1.1</span>
+          <span class="std-pill">API 1104</span>
+          <span class="std-pill">ASME Sec. IX</span>
+          <span class="std-pill">NFPA 30</span>
+          <span class="std-pill">ACGIH TLVs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM DESIGN -->
+<section class="service-section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-label-col">
+        <span class="service-category">Curriculum</span>
+        <h2>Curriculum Design &amp; Program Review</h2>
+        <div class="rule-accent"></div>
+      </div>
+      <div class="service-body">
+        <p>Curriculum that closes the gap between classroom and shop floor. Most industrial training programs cover the right topics in the wrong sequence, or cover the standard accurately but miss how the work actually happens. A practitioner review identifies both — and produces a roadmap to close them.</p>
+        <p>Work includes curriculum alignment to AWS SENSE, NCCER, and applicable industry standards, program audits for CTE and community college welding and fabrication tracks, sequence and coverage gap analysis, and advisory support for programs building new curriculum from scratch.</p>
+        <ul class="topic-list">
+          <li>Curriculum alignment to AWS SENSE, NCCER, and OSHA standards</li>
+          <li>Coverage gap analysis with prioritized findings</li>
+          <li>Program audit for CTE and vocational welding tracks</li>
+          <li>Sequence and instructional flow review</li>
+          <li>Advisory support for new program development</li>
+          <li>Technical content review — textbook chapters, eLearning scripts, training materials</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH ASSISTANCE -->
+<section class="service-section">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-label-col">
+        <span class="service-category">Research</span>
+        <h2>Research Assistance</h2>
+        <div class="rule-accent"></div>
+      </div>
+      <div class="service-body">
+        <p>Specialized consulting for student researchers, faculty projects, and grant-funded programs where fabrication, materials science, or industrial safety expertise is part of the work. The value is a practitioner who has worked the material or the process — not just read the literature — and can help frame, validate, or pressure-test the technical dimensions of a project.</p>
+        <p>Engagements vary widely: technical advisory for a thesis project, subject matter input for a funded research program, review of technical methodology in a fabrication or materials context, or ongoing consultation over the course of a grant cycle. Open to both student researchers and institutional programs.</p>
+        <ul class="topic-list">
+          <li>Technical advisory for thesis and graduate research projects</li>
+          <li>Subject matter consultation for grant-funded programs</li>
+          <li>Fabrication and materials methodology review</li>
+          <li>Industrial safety and regulatory research support</li>
+          <li>Practitioner perspective for academic or applied research contexts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section class="service-section" style="background:var(--off-white);">
+  <div class="container">
+    <div class="service-grid">
+      <div class="service-label-col">
+        <span class="service-category">Speaking</span>
+        <h2>Speaking Engagements</h2>
+        <div class="rule-accent"></div>
+      </div>
+      <div class="service-body">
+        <p>Select speaking engagements for educational programs, industry events, and professional organizations. Currently active in the welding and fabrication education community as 2nd Vice Chair of the AWS Niagara Frontier Section — with ongoing engagement in trade student development, weld competitions, and professional chapter programming across Western New York.</p>
+        <p>Topic areas draw on the intersection of fabrication practice, workforce development, advanced materials, and trades education. Engagements are accepted selectively — the right fit is a program or event where a practitioner voice adds something a purely academic speaker cannot.</p>
+
+        <div class="speaking-note">
+          <p><strong>Accepting select engagements.</strong> If you have a program, conference, or event where this background would be a fit — reach out with the details. The conversation starts with understanding what the audience needs, not a speaker sheet.</p>
+        </div>
+
+        <ul class="topic-list" style="margin-top:24px;">
+          <li>Advanced and exotic materials in modern fabrication</li>
+          <li>Workforce development and the skilled trades pipeline</li>
+          <li>Shop floor to consulting — the practitioner career path</li>
+          <li>Welding inspection, quality, and compliance for educators</li>
+          <li>Semiconductor and precision manufacturing for trades programs</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO CTA -->
+<section style="padding: 48px 0; border-top: 1px solid var(--border);">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;">
+    <div>
+      <div class="section-label">Sample Work</div>
+      <p style="font-size:14px;color:var(--mid);margin:6px 0 0;max-width:520px;">The portfolio includes a 10-question EHS knowledge assessment and a full scaffold safety training evaluation — both available to download without a request form.</p>
+    </div>
+    <a href="/portfolio.html" class="btn btn-primary" style="flex-shrink:0;">View Portfolio</a>
+  </div>
+</section>
+
+<!-- CALLOUT -->
+<section class="callout-strip">
+  <div class="container">
+    <h2>Start with what you need.</h2>
+    <p>Assessment work, curriculum review, research consultation, or a speaking inquiry — reach out directly. Most engagements begin with a short conversation to confirm fit before any commitment on either side.</p>
+    <a href="/contact.html?inquiry=training" class="btn btn-primary">Get in Touch</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/logo.svg" alt="Setpoint Advisors" style="height:36px;width:auto;opacity:0.7;margin-bottom:8px;">
+      <span class="footer-copy">&copy; 2026 Setpoint Advisors</span>
+      <a href="mailto:griffin@setpointadvisors.com" class="footer-email">griffin@setpointadvisors.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="/index.html">Consulting</a>
+      <a href="/workforce/">Workforce</a>
+      <a href="/academic/">Academic</a>
+      <a href="/about.html">About</a>
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://www.linkedin.com/in/griffinmcguire/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links  = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      links.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+</script>
+</body>
+</html>
